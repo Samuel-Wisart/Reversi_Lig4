@@ -9,4 +9,15 @@ public:
     virtual void imprimirTabuleiro() = 0;
 };
 
+class Casa {
+private:
+    int x;
+    int y;
+    char cor;
+    bool vazia;
+public:
+    virtual void lerCasa() = 0;
+    virtual void imprimirCasa() = 0;
+};
+
 #endif // TABULEIRO_HPP

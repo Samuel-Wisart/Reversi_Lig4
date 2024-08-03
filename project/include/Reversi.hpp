@@ -3,7 +3,7 @@
 
 #include "Tabuleiro.hpp"
 
-class Reversi : public JogoDeTabuleiro {
+class Reversi : public Tabuleiro {
 public:
     void lerJogada() override;
     bool testarJogada() override;

@@ -2,6 +2,7 @@
 #define JOGADOR_HPP
 
 #include <string>
+#include <vector>
 
 class Jogador {
 public:
@@ -13,8 +14,13 @@ public:
     int derrotasLig4 = 0;
     
     void cadastrarJogador(const std::string& nome, const std::string& apelido);
-    void removerJogador();
+    void removerJogador(const std::string& apelido);
     void listarJogadores();
+    void salvarJogadores(const std::string& filename);
+    void carregarJogadores(const std::string& filename);
+
+private:
+    std::vector<Jogador> jogadores;
 };
 
 #endif // JOGADOR_HPP

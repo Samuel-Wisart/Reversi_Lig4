@@ -5,13 +5,22 @@
 #include "Sistema.hpp"
 
 int main() {
-    Jogador jogador1, jogador2;
-    jogador1.cadastrarJogador("Nome1", "Apelido1");
-    jogador2.cadastrarJogador("Nome2", "Apelido2");
+    Jogador jogadorManager;
+
+    jogadorManager.cadastrarJogador("Nome1", "Apelido1");
+    jogadorManager.cadastrarJogador("Nome2", "Apelido2");
+    jogadorManager.listarJogadores();
+
+    jogadorManager.salvarJogadores("jogadores.csv");
+    jogadorManager.removerJogador("Apelido1");
+
+    std::cout << "\nApós remoção:\n";
+    jogadorManager.listarJogadores();
+
+    jogadorManager.carregarJogadores("jogadores.csv");
     
-    Reversi reversi;
-    Sistema sistema;
-    sistema.executarPartida(&reversi, jogador1, jogador2);
-    
+    std::cout << "\nApós carregar do arquivo:\n";
+    jogadorManager.listarJogadores();
+
     return 0;
 }
