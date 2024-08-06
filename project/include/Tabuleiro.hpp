@@ -1,23 +1,44 @@
 #ifndef TABULEIRO_HPP
 #define TABULEIRO_HPP
 
-class Tabuleiro {
-public:
-    virtual void lerJogada() = 0;
-    virtual bool testarJogada() = 0;
-    virtual bool testarCondicaoVitoria() = 0;
-    virtual void imprimirTabuleiro() = 0;
-};
-
-class Casa {
+class Casa
+{
 private:
     int x;
     int y;
     char cor;
-    bool vazia;
+
 public:
-    virtual void lerCasa() = 0;
-    virtual void imprimirCasa() = 0;
+    Casa(int x, int y);
+    Casa(int x, int y, char cor);
+    virtual ~Casa();
+
+    virtual int getX();
+    virtual int getY();
+    virtual char getCor();
+    virtual void setCor(char cor);
+    virtual void imprimirPosicao();
+    
 };
+
+class Tabuleiro
+{
+private:
+    int altura;
+    int largura;
+
+    virtual bool testarCondicaoVitoria(char time, int x, int y) = 0;
+public:
+    Casa ***casas;
+
+    Tabuleiro(int altura, int largura);
+    virtual ~Tabuleiro();	
+
+    virtual void fazerJogada(char time, int x, int y) = 0;
+    virtual bool testarJogada(char time, int x, int y) = 0;
+    virtual void imprimirTabuleiro();
+};
+
+char numeroParaLetra(int numero);
 
 #endif // TABULEIRO_HPP

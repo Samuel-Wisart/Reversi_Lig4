@@ -4,11 +4,16 @@
 #include "Tabuleiro.hpp"
 
 class Reversi : public Tabuleiro {
+private:
+    bool testarCondicaoVitoria(char time, int x, int y) override;
+
 public:
-    void lerJogada() override;
-    bool testarJogada() override;
-    bool testarCondicaoVitoria() override;
-    void imprimirTabuleiro() override;
+    Reversi(int altura, int largura);
+    virtual ~Reversi();
+
+    void fazerJogada(char time, int x, int y) override;
+    bool testarJogada(char time, int x, int y) override;
+
 };
 
 #endif // REVERSI_HPP

@@ -6,19 +6,13 @@
 
 int main() {
 
-    Jogadores jogadorManager;
+    Jogadores Jogadores;
+    Jogadores.carregarJogadores();
 
-    jogadorManager.cadastrarJogador("Nome1", "Apelido1");
-    jogadorManager.cadastrarJogador("Nome2", "Apelido2");
-    jogadorManager.listarJogadores();
-
-    jogadorManager.salvarJogadores();
-    jogadorManager.removerJogador("Apelidxo1");
-
-    std::cout << "\n\nApós remoção:\n\n";
-    jogadorManager.listarJogadores();
-
-    jogadorManager.salvarJogadores();
+    Reversi reversi(8, 8);
+    reversi.imprimirTabuleiro();
+    reversi.fazerJogada('B', 1, 1);
+    reversi.imprimirTabuleiro();
 
     return 0;
 }
