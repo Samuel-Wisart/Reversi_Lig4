@@ -1,5 +1,5 @@
 #ifndef TABULEIRO_HPP
-#define DE_TABULEIRO_HPP
+#define TABULEIRO_HPP
 
 class Tabuleiro {
 public:
