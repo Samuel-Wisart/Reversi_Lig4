@@ -5,22 +5,20 @@
 #include "Sistema.hpp"
 
 int main() {
-    Jogador jogadorManager;
+
+    Jogadores jogadorManager;
 
     jogadorManager.cadastrarJogador("Nome1", "Apelido1");
     jogadorManager.cadastrarJogador("Nome2", "Apelido2");
     jogadorManager.listarJogadores();
 
-    jogadorManager.salvarJogadores("jogadores.csv");
-    jogadorManager.removerJogador("Apelido1");
+    jogadorManager.salvarJogadores();
+    jogadorManager.removerJogador("Apelidxo1");
 
-    std::cout << "\nApós remoção:\n";
+    std::cout << "\n\nApós remoção:\n\n";
     jogadorManager.listarJogadores();
 
-    jogadorManager.carregarJogadores("jogadores.csv");
-    
-    std::cout << "\nApós carregar do arquivo:\n";
-    jogadorManager.listarJogadores();
+    jogadorManager.salvarJogadores();
 
     return 0;
 }

@@ -1,31 +1,29 @@
 {
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "C/C++: gcc.exe build and debug active file",
+            "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${workspaceFolder}/project/bin/teste",  // Ajuste conforme necessário
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}/project",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "F:\\MinGW\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
-                },
-                {
-                    "description": "Set Disassembly Flavor to Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: gcc.exe build active file"
+            "preLaunchTask": "build",
+            "miDebuggerPath": "F:\\MinGW\\bin\\gdb.exe",  // Ajuste o caminho para o gdb
+            "logging": {
+                "engineLogging": true
+            }
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

@@ -3,82 +3,55 @@
 #include <fstream>
 #include <sstream>
 
-void Jogador::cadastrarJogador(const std::string& nome, const std::string& apelido) {
-    for (const auto& jogador : jogadores) {
-        if (jogador.apelido == apelido) {
-            std::cout << "ERRO: jogador repetido\n";
-            return;
-        }
-    }
+Jogador::Jogador(const std::string &nome, const std::string &apelido): nome(nome), apelido(apelido){};
+Jogador::Jogador(const std::string &nome, const std::string &apelido, int vitoriasReversi, int derrotasReversi, int vitoriasLig4, int derrotasLig4): nome(nome), apelido(apelido), vitoriasReversi(vitoriasReversi), derrotasReversi(derrotasReversi), vitoriasLig4(vitoriasLig4), derrotasLig4(derrotasLig4){};
 
-    Jogador novoJogador;
-    novoJogador.nome = nome;
-    novoJogador.apelido = apelido;
-    jogadores.push_back(novoJogador);
-    std::cout << "Jogador " << apelido << " cadastrado com sucesso\n";
+std::ostream& operator<<(std::ostream& os, const Jogador& jogador) {
+    os << jogador.getApelido() << " " << jogador.getNome() << "\n"
+    << "REVERSI - V: " << jogador.getVitoriasReversi() << " D: " << jogador.getDerrotasReversi() << "\n"
+    << "LIG4 - V: " << jogador.getVitoriasLig4() << " D: " << jogador.getDerrotasLig4() << "\n";
+    
+    return os;
 }
 
-void Jogador::removerJogador(const std::string& apelido) {
-    for (auto it = jogadores.begin(); it != jogadores.end(); ++it) {
-        if (it->apelido == apelido) {
-            jogadores.erase(it);
-            std::cout << "Jogador " << apelido << " removido com sucesso\n";
-            return;
-        }
-    }
-    std::cout << "ERRO: jogador inexistente\n";
+// Getters
+std::string Jogador::getNome() const {
+    return nome;
 }
 
-void Jogador::listarJogadores() {
-    for (const auto& jogador : jogadores) {
-        std::cout << jogador.apelido << " " << jogador.nome << "\n";
-        std::cout << "REVERSI - V: " << jogador.vitoriasReversi << " D: " << jogador.derrotasReversi << "\n";
-        std::cout << "LIG4 - V: " << jogador.vitoriasLig4 << " D: " << jogador.derrotasLig4 << "\n";
-    }
+std::string Jogador::getApelido() const {
+    return apelido;
 }
 
-void Jogador::salvarJogadores(const std::string& filename) {
-    std::ofstream file(filename);
-    if (!file.is_open()) {
-        std::cerr << "Erro ao abrir arquivo para escrita\n";
-        return;
-    }
-
-    for (const auto& jogador : jogadores) {
-        file << jogador.nome << "," << jogador.apelido << ","
-             << jogador.vitoriasReversi << "," << jogador.derrotasReversi << ","
-             << jogador.vitoriasLig4 << "," << jogador.derrotasLig4 << "\n";
-    }
-
-    file.close();
+int Jogador::getVitoriasReversi() const {
+    return vitoriasReversi;
 }
 
-void Jogador::carregarJogadores(const std::string& filename) {
-    std::ifstream file(filename);
-    if (!file.is_open()) {
-        std::cerr << "Erro ao abrir arquivo para leitura\n";
-        return;
-    }
+int Jogador::getDerrotasReversi() const {
+    return derrotasReversi;
+}
 
-    std::string line;
-    while (std::getline(file, line)) {
-        std::istringstream iss(line);
-        std::string token;
-        Jogador jogador;
+int Jogador::getVitoriasLig4() const {
+    return vitoriasLig4;
+}
 
-        std::getline(iss, jogador.nome, ',');
-        std::getline(iss, jogador.apelido, ',');
-        std::getline(iss, token, ',');
-        jogador.vitoriasReversi = std::stoi(token);
-        std::getline(iss, token, ',');
-        jogador.derrotasReversi = std::stoi(token);
-        std::getline(iss, token, ',');
-        jogador.vitoriasLig4 = std::stoi(token);
-        std::getline(iss, token, ',');
-        jogador.derrotasLig4 = std::stoi(token);
+int Jogador::getDerrotasLig4() const {
+    return derrotasLig4;
+}
 
-        jogadores.push_back(jogador);
-    }
+// Incrementadores
+void Jogador::plusVitoriasReversi() {
+    this->vitoriasReversi++;
+}
 
-    file.close();
+void Jogador::plusDerrotasReversi() {
+    this->derrotasReversi++;
+}
+
+void Jogador::plusVitoriasLig4() {
+    this->vitoriasLig4++;
+}
+
+void Jogador::plusDerrotasLig4() {
+    this->derrotasLig4++;
 }
