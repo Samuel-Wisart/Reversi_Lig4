@@ -27,15 +27,19 @@ private:
     int altura;
     int largura;
 
-    virtual bool testarCondicaoVitoria(char time, int x, int y) = 0;
 public:
     Casa ***casas;
 
     Tabuleiro(int altura, int largura);
     virtual ~Tabuleiro();	
 
+    int getAltura();
+    int getLargura();
+
     virtual void fazerJogada(char time, int x, int y) = 0;
     virtual bool testarJogada(char time, int x, int y) = 0;
+    virtual bool testarCondicaoVitoria(char time, int x, int y) = 0;
+    
     virtual void imprimirTabuleiro();
 };
 

@@ -37,6 +37,8 @@ void Casa::setCor(char cor)
     this->cor = cor;
 }
 
+
+
 void Casa::imprimirPosicao()
 {
     std::cout << numeroParaLetra(x) << ' ' << y << std::endl;

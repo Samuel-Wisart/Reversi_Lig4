@@ -3,15 +3,15 @@
 
 Tabuleiro::Tabuleiro(int altura, int largura) : altura(altura), largura(largura)
 {
-    casas = new Casa **[altura];
-    for (int i = 0; i < altura; i++)
+    casas = new Casa **[largura];
+    for (int i = 0; i < largura; i++)
     {
-        Casa **linhaCasas = new Casa*[largura];
-        for (int j = 0; j < largura; j++)
+        Casa **colunaCasas = new Casa*[altura];
+        for (int j = 0; j < altura; j++)
         {
-            linhaCasas[j] = new Casa(i, j);
+            colunaCasas[j] = new Casa(i, j);
         }
-        casas[i] = linhaCasas;
+        casas[i] = colunaCasas;
     }
 }
 
@@ -28,22 +28,34 @@ Tabuleiro::~Tabuleiro()
     delete[] casas;
 }
 
+int Tabuleiro::getAltura()
+{
+    return altura;
+}
+
+int Tabuleiro::getLargura()
+{
+    return largura;
+}
+
 void Tabuleiro::imprimirTabuleiro()
 {   
-    std::cout << "  "; // Espaço para as margens superiores
-    for (int j = 0; j < largura; j++)
-    {
-        std::cout << j << ' ';
-    }
-    std::cout << std::endl;
-
     for (int i = 0; i < altura; i++)
     {
         std::cout << i << ' '; // Margem esquerda
         for (int j = 0; j < largura; j++)
         {
-            std::cout << casas[i][j]->getCor() << ' ';
+            std::cout << casas[j][i]->getCor() << ' ';
         }
         std::cout << std::endl;
     }
+
+    std::cout << "  "; // Espaço para as margens inferiores
+    for (int j = 0; j < largura; j++)
+    {
+        std::cout << j << ' ';
+    }
+
+    std::cout << std::endl;
+    std::cout << std::endl;
 }
