@@ -152,6 +152,18 @@ void Jogadores::carregarJogadores()
     file.close();
 }
 
+Jogador *Jogadores::buscarJogadorPorApelido(const std::string &apelido)
+{
+    for (auto &jogador : jogadores)
+    {
+        if (jogador.getApelido() == apelido)
+        {
+            return &jogador;
+        }
+    }
+    return nullptr;
+}
+
 void Jogadores::imprimirJogadores()
 {
     for (const auto &jogador : jogadores)

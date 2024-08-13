@@ -13,6 +13,7 @@ public:
 
     void fazerJogada(char time, int x, int y) override;
     std::string testarJogada(char time, int x, int y) override;
+    bool checarSeDaPraJogar(char time);
     char testarCondicaoVitoria(char time) override;
 
 private:

@@ -40,6 +40,7 @@ public:
 
     virtual void fazerJogada(char time, int x, int y) = 0;
     virtual std::string testarJogada(char time, int x, int y) = 0;
+    virtual bool checarSeDaPraJogar(char time) = 0;
     virtual char testarCondicaoVitoria(char time) = 0;
     
     virtual void imprimirTabuleiro();

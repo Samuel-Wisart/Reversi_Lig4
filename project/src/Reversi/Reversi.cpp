@@ -22,7 +22,7 @@ void Reversi::fazerJogada(char time, int x, int y)
             mudarCor(casas[i.first][i.second]);
         }
 
-        testarCondicaoVitoria(time, x, y);
+        testarCondicaoVitoria(time);
     }
     catch (std::invalid_argument &e)
     {
@@ -30,29 +30,69 @@ void Reversi::fazerJogada(char time, int x, int y)
     }
 }
 
-bool Reversi::testarJogada(char time, int x, int y)
+std::string Reversi::testarJogada(char time, int x, int y)
 {   
     if (x < 0 || x >= getLargura() || y < 0 || y >= getAltura())
     {
-        throw std::invalid_argument("Posicao invalida");
-        return false;
+        return "Posicao invalida";
     }
     if (casas[x][y]->getCor() != ' ')
     {
-        throw std::invalid_argument("Casa ja ocupada");
-        return false;
+        return "Casa ja ocupada";
     }
     if (selecionarPecasAlteradas(time, x, y).size() == 0)
     {
-        throw std::invalid_argument("Sem pecas para capturar");
-        return false;
+        return "Sem pecas para capturar";
     }
-    return true;
+    return "OK";
 }
 
-bool Reversi::testarCondicaoVitoria(char time, int x, int y)
+char Reversi::testarCondicaoVitoria(char time)
 {
-    return true;
+    if (!checarSeDaPraJogar('B') && !checarSeDaPraJogar('P'))
+    {
+        int pecasB = 0;
+        int pecasP = 0;
+        for (int i = 0; i < getLargura(); i++)
+        {
+            for (int j = 0; j < getAltura(); j++)
+            {
+                if (casas[i][j]->getCor() == 'B')
+                {
+                    pecasB++;
+                }
+                if (casas[i][j]->getCor() == 'P')
+                {
+                    pecasP++;
+                }
+            }
+        }
+        if (pecasB > pecasP)
+        {
+            return 'B';
+        }
+        if (pecasP > pecasB)
+        {
+            return 'P';
+        }
+        return 'E';
+    }
+    return ' ';
+}
+
+bool Reversi::checarSeDaPraJogar(char time)
+{
+    for (int i = 0; i < getLargura(); i++)
+    {
+        for (int j = 0; j < getAltura(); j++)
+        {
+            if (testarJogada(time, i, j) == "OK")
+            {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 std::vector<std::pair<int, int>> Reversi::selecionarPecasAlteradas(char time, int x, int y)

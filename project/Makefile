@@ -13,13 +13,14 @@ SOURCES = $(wildcard $(SRCDIR)/*.cpp) \
           $(wildcard $(SRCDIR)/Tabuleiro/*.cpp) \
           $(wildcard $(SRCDIR)/Reversi/*.cpp) \
           $(wildcard $(SRCDIR)/Lig4/*.cpp) \
-          $(wildcard $(SRCDIR)/Jogador/*.cpp)
+          $(wildcard $(SRCDIR)/Jogador/*.cpp) \
+		  $(wildcard $(SRCDIR)/Partida/*.cpp)
 
 OBJECTS = $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SOURCES))
 EXECUTABLE = $(BINDIR)/teste
 
 # Alvo padrão
-all: $(BINDIR) $(OBJDIR) $(OBJDIR)\Tabuleiro $(OBJDIR)\Reversi $(OBJDIR)\Lig4 $(OBJDIR)\Jogador $(EXECUTABLE)
+all: $(BINDIR) $(OBJDIR) $(OBJDIR)\Tabuleiro $(OBJDIR)\Reversi $(OBJDIR)\Lig4 $(OBJDIR)\Jogador $(OBJDIR)\Partida $(EXECUTABLE)
 
 # Criação dos diretórios bin e obj se não existirem
 $(BINDIR):
@@ -39,6 +40,9 @@ $(OBJDIR)\Lig4:
 
 $(OBJDIR)\Jogador:
 	if not exist $(OBJDIR)\Jogador mkdir $(OBJDIR)\Jogador
+
+$(OBJDIR)\Partida:
+	if not exist $(OBJDIR)\Partida mkdir $(OBJDIR)\Partida
 
 # Linkagem do executável
 $(EXECUTABLE): $(OBJECTS)

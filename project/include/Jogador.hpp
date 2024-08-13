@@ -55,6 +55,7 @@ public:
     void carregarJogadores();
     void criarArquivoJogadores();
     void imprimirJogadores();
+    Jogador* buscarJogadorPorApelido(const std::string &apelido);
 };
 
 std::ostream& operator<<(std::ostream& os, const Jogador& jogador);
