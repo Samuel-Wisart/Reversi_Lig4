@@ -4,6 +4,7 @@
 #include "Tabuleiro.hpp"
 #include <vector>
 #include <utility>
+#include <string>
 
 class Reversi : public Tabuleiro {
 public:
@@ -11,9 +12,10 @@ public:
     virtual ~Reversi();
 
     void fazerJogada(char time, int x, int y) override;
-    bool testarJogada(char time, int x, int y) override;
-    bool testarCondicaoVitoria(char time, int x, int y) override;
+    std::string testarJogada(char time, int x, int y) override;
+    char testarCondicaoVitoria(char time) override;
 
+private:
     std::vector<std::pair<int, int>> selecionarPecasAlteradas(char time, int x, int y);
     std::vector<std::pair<int, int>> selecionarPecasAlteradas(char time, int x, int y, void (direcionador)(int&, int&));
 
