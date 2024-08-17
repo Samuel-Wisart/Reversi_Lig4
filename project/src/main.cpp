@@ -9,9 +9,9 @@ int main() {
     Jogador* j1 = jogadores.buscarJogadorPorApelido("J1");
     Jogador* j2 = jogadores.buscarJogadorPorApelido("J2");
 
-    Reversi reversi(8, 8);
+    Lig4 lig4(8, 8);
 
-    Partida partida(reversi, *j1, *j2);
+    Partida partida(lig4, *j1, *j2);
     partida.executarPartida();
 
 
