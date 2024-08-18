@@ -21,8 +21,6 @@ void Reversi::fazerJogada(char time, int x, int y)
         {
             mudarCor(casas[i.first][i.second]);
         }
-
-        testarCondicaoVitoria(time);
     }
     catch (std::invalid_argument &e)
     {
@@ -78,6 +76,35 @@ char Reversi::testarCondicaoVitoria(char time)
         return 'E';
     }
     return ' ';
+}
+
+std::pair<int, int> Reversi::coletarJogada(char time, std::string apelido)
+{
+    if (time != 'B' || time != 'P') throw std::invalid_argument("Time invalido");
+
+    std::pair<int, int> jogada;
+
+    while (true)
+    {
+        int x, y;
+
+        std::cout << "Vez de " << apelido << " (x y)" << std::endl;
+        std::cin >> x >> y;
+
+        std::string resultadoTeste = testarJogada(time, x, y);
+
+        if (resultadoTeste == "OK")
+        {
+            jogada.first = x;
+            jogada.second = y;
+            return jogada;
+        }
+        else
+        {
+            std::cout << "Jogada Invalida: " << resultadoTeste << std::endl
+                      << std::endl;
+        }
+    }
 }
 
 bool Reversi::checarSeDaPraJogar(char time)

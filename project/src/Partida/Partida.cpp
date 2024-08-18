@@ -12,10 +12,19 @@ void Partida::executarPartida()
         if (jogo.checarSeDaPraJogar('B'))
         {
             jogo.imprimirTabuleiro();
-            fazerJogada('B');
+
+            //std::pair<int, int> jogada = jogo.coletarJogada('B', jogador1.getApelido());
+            //jogo.fazerJogada('B', jogada.first, jogada.second);
+            jogo.fazerJogada('B', 0, 0);
+            jogo.fazerJogada('B', 1, 0);
+            jogo.fazerJogada('B', 2, 0);
+            jogo.fazerJogada('B', 3, 0);
+
             resultado = jogo.testarCondicaoVitoria('B');
             if (resultado != ' ')
-            {
+            {   
+                jogo.imprimirTabuleiro();
+                std::cout << "O jogador " << jogador1.getApelido() << " venceu!" << std::endl;
                 atualizarEstatisticas(resultado);
                 return;
             }
@@ -24,47 +33,18 @@ void Partida::executarPartida()
         if (jogo.checarSeDaPraJogar('P'))
         {
             jogo.imprimirTabuleiro();
-            fazerJogada('P');
+
+            std::pair<int, int> jogada = jogo.coletarJogada('P', jogador2.getApelido());
+            jogo.fazerJogada('P', jogada.first, jogada.second);
+
             resultado = jogo.testarCondicaoVitoria('P');
             if (resultado != ' ')
             {
+                jogo.imprimirTabuleiro();
+                std::cout << "O jogador " << jogador2.getApelido() << " venceu!" << std::endl;
                 atualizarEstatisticas(resultado);
                 return;
             }
-        }
-    }
-}
-
-std::string Partida::fazerJogada(char time)
-{
-    while (true)
-    {
-        int x, y;
-        if (time == 'B')
-        {
-            std::cout << "Vez de " << jogador1.getApelido() << " (x y)" << std::endl;
-            std::cin >> x >> y;
-        }
-        else if (time == 'P')
-        {
-            std::cout << "Vez de " << jogador2.getApelido() << " (x y)" << std::endl;
-            std::cin >> x >> y;
-        }
-        else
-        {
-            throw std::invalid_argument("Time invalido");
-        }
-
-        std::string resultadoTeste = jogo.testarJogada(time, x, y);
-        if (resultadoTeste == "OK")
-        {
-            jogo.fazerJogada(time, x, y);
-            return "OK";
-        }
-        else
-        {
-            std::cout << "Jogada Invalida: " << resultadoTeste << std::endl
-                      << std::endl;
         }
     }
 }
@@ -129,4 +109,5 @@ void Partida::atualizarEstatisticasLig4(char resultado)
     {
         throw std::invalid_argument("Resultado invalido");
     }
+    
 }

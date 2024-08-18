@@ -12,15 +12,44 @@ void Lig4::fazerJogada(char time, int x, int y)
         testarJogada(time, x, y);
 
         retirarMarcacoesDeQuedaDePeca();
-        
+
         soltarPeca(time, x);
 
-        testarCondicaoVitoria(time);
     }
     catch (std::invalid_argument &e)
     {
         std::cout << "Jogada Invalida: " << e.what() << std::endl
                   << std::endl;
+    }
+}
+
+std::pair<int, int> Lig4::coletarJogada(char time, std::string apelido)
+{
+    if (time != 'B' && time != 'P') throw std::invalid_argument("Time invalido");
+
+    std::pair<int, int> jogada;
+
+    while (true)
+    {
+        int x, y;
+
+        std::cout << "Vez de " << apelido << " (x)" << std::endl;
+        std::cin >> x;
+        y = 0;
+
+        std::string resultadoTeste = testarJogada(time, x, y);
+
+        if (resultadoTeste == "OK")
+        {
+            jogada.first = x;
+            jogada.second = y;
+            return jogada;
+        }
+        else
+        {
+            std::cout << "Jogada Invalida: " << resultadoTeste << std::endl
+                      << std::endl;
+        }
     }
 }
 
@@ -52,17 +81,17 @@ void Lig4::retirarMarcacoesDeQuedaDePeca()
 
 void Lig4::soltarPeca(char time, int x)
 {
-    int alturaAnalizada = getAltura() - 1;
-    for (; alturaAnalizada >= 0; alturaAnalizada--)
+    int alturaAnalizada = 0;
+    for (; alturaAnalizada < getAltura(); alturaAnalizada++)
     {
         if (casas[x][alturaAnalizada]->getCor() == ' ')
         {
             casas[x][alturaAnalizada]->setCor(time);
-            alturaAnalizada--;
+            alturaAnalizada++;
             break;
         }
     }
-    for (; alturaAnalizada >= 0; alturaAnalizada--)
+    for (; alturaAnalizada < getAltura(); alturaAnalizada++)
     {
         if (casas[x][alturaAnalizada]->getCor() == ' ')
         {
@@ -103,6 +132,7 @@ char Lig4::testarCondicaoVitoria(char time)
         return vencedor;
     }
 
+    // Verificacao Empate
     int jogadasValidas = 0;
     for (int i = 0; i < getLargura(); i++)
     {
@@ -139,7 +169,7 @@ char Lig4::testarVitoriaPorLigacao()
             }
         }
     }
-    return ' ';
+    return vencedor;
 }
 
 bool Lig4::pecaVenceu(int x, int y)
@@ -182,12 +212,8 @@ bool Lig4::pecaVenceu(int x, int y, void(direcionador)(int &, int &))
             seguenciaPecas++;
             if (seguenciaPecas == 4)
                 return true;
-            break;
         }
         if (casas[x][y]->getCor() == ' ' || casas[x][y]->getCor() == '|')
-        {
-            break;
-        }
         {
             return false;
         }
@@ -207,7 +233,9 @@ void Lig4::imprimirTabuleiro()
     {
         std::cout << j << ' ';
     }
-    for (int i = 0; i < getAltura(); i++)
+    std::cout << std::endl;
+
+    for (int i = getAltura() - 1; i >= 0; i--)
     {
         for (int j = 0; j < getLargura(); j++)
         {
@@ -218,7 +246,6 @@ void Lig4::imprimirTabuleiro()
 
     std::cout << "  "; // Espaço para as margens inferiores
 
-    std::cout << std::endl;
     std::cout << std::endl;
 }
 

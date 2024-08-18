@@ -15,6 +15,7 @@ public:
     std::string testarJogada(char time, int x, int y) override;
     bool checarSeDaPraJogar(char time);
     char testarCondicaoVitoria(char time) override;
+    std::pair<int, int> coletarJogada(char time, std::string apelido) override;
 
 private:
     std::vector<std::pair<int, int>> selecionarPecasAlteradas(char time, int x, int y);

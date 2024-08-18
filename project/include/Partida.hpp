@@ -1,5 +1,5 @@
-#ifndef SISTEMA_HPP
-#define SISTEMA_HPP
+#ifndef PARTIDA_HPP
+#define PARTIDA_HPP
 
 #include <iostream>
 #include "Tabuleiro.hpp"
@@ -9,9 +9,9 @@
 
 class Partida {
 private:
-    Tabuleiro& jogo;
-    Jogador jogador1;
-    Jogador jogador2;
+    Tabuleiro &jogo;
+    Jogador &jogador1;
+    Jogador &jogador2;
 public:
     Partida(Tabuleiro& jogo, Jogador& jogador1, Jogador& jogador2);
     
@@ -23,4 +23,4 @@ private:
     std::string fazerJogada(char time);
 };
 
-#endif // SISTEMA_HPP
+#endif // PARTIDA_HPP
