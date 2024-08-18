@@ -17,9 +17,9 @@ Tabuleiro::Tabuleiro(int altura, int largura) : altura(altura), largura(largura)
 
 Tabuleiro::~Tabuleiro()
 {
-    for (int i = 0; i < altura; i++)
+    for (int i = 0; i < largura; i++)
     {
-        for (int j = 0; j < largura; j++)
+        for (int j = 0; j < altura; j++)
         {
             delete casas[i][j];
         }

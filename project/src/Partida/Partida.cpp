@@ -6,46 +6,46 @@ Partida::Partida(Tabuleiro &jogo, Jogador &jogador1, Jogador &jogador2) : jogo(j
 
 void Partida::executarPartida()
 {
-    char resultado;
-    while (true)
-    {
-        if (jogo.checarSeDaPraJogar('B'))
+    try {
+        char resultado;
+        while (true)
         {
-            jogo.imprimirTabuleiro();
-
-            //std::pair<int, int> jogada = jogo.coletarJogada('B', jogador1.getApelido());
-            //jogo.fazerJogada('B', jogada.first, jogada.second);
-            jogo.fazerJogada('B', 0, 0);
-            jogo.fazerJogada('B', 1, 0);
-            jogo.fazerJogada('B', 2, 0);
-            jogo.fazerJogada('B', 3, 0);
-
-            resultado = jogo.testarCondicaoVitoria('B');
-            if (resultado != ' ')
-            {   
-                jogo.imprimirTabuleiro();
-                std::cout << "O jogador " << jogador1.getApelido() << " venceu!" << std::endl;
-                atualizarEstatisticas(resultado);
-                return;
-            }
-        }
-
-        if (jogo.checarSeDaPraJogar('P'))
-        {
-            jogo.imprimirTabuleiro();
-
-            std::pair<int, int> jogada = jogo.coletarJogada('P', jogador2.getApelido());
-            jogo.fazerJogada('P', jogada.first, jogada.second);
-
-            resultado = jogo.testarCondicaoVitoria('P');
-            if (resultado != ' ')
+            if (jogo.checarSeDaPraJogar('B'))
             {
                 jogo.imprimirTabuleiro();
-                std::cout << "O jogador " << jogador2.getApelido() << " venceu!" << std::endl;
-                atualizarEstatisticas(resultado);
-                return;
+
+                std::pair<int, int> jogada = jogo.coletarJogada('B', jogador1.getApelido());
+                jogo.fazerJogada('B', jogada.first, jogada.second);
+
+                resultado = jogo.testarCondicaoVitoria('B');
+                if (resultado != ' ')
+                {   
+                    jogo.imprimirTabuleiro();
+                    std::cout << "O jogador " << jogador1.getApelido() << " venceu!" << std::endl;
+                    atualizarEstatisticas(resultado);
+                    break;  // Use break ao invés de return para não sair da função executarPartida.
+                }
+            }
+
+            if (jogo.checarSeDaPraJogar('P'))
+            {
+                jogo.imprimirTabuleiro();
+
+                std::pair<int, int> jogada = jogo.coletarJogada('P', jogador2.getApelido());
+                jogo.fazerJogada('P', jogada.first, jogada.second);
+
+                resultado = jogo.testarCondicaoVitoria('P');
+                if (resultado != ' ')
+                {
+                    jogo.imprimirTabuleiro();
+                    std::cout << "O jogador " << jogador2.getApelido() << " venceu!" << std::endl;
+                    atualizarEstatisticas(resultado);
+                    break;  // Use break ao invés de return para não sair da função executarPartida.
+                }
             }
         }
+    } catch (const std::exception &e) {
+        std::cerr << "Erro durante a execução da partida: " << e.what() << std::endl;
     }
 }
 
@@ -72,7 +72,7 @@ void Partida::atualizarEstatisticasReversi(char resultado)
         jogador1.incrementarVitoriasReversi();
         jogador2.incrementarDerrotasReversi();
     }
-    else if (resultado == 'B')
+    else if (resultado == 'P')
     {
         jogador1.incrementarDerrotasReversi();
         jogador2.incrementarVitoriasReversi();
@@ -95,7 +95,7 @@ void Partida::atualizarEstatisticasLig4(char resultado)
         jogador1.incrementarVitoriasLig4();
         jogador2.incrementarDerrotasLig4();
     }
-    else if (resultado == 'B')
+    else if (resultado == 'P')
     {
         jogador1.incrementarDerrotasLig4();
         jogador2.incrementarVitoriasLig4();
@@ -109,5 +109,5 @@ void Partida::atualizarEstatisticasLig4(char resultado)
     {
         throw std::invalid_argument("Resultado invalido");
     }
-    
+
 }

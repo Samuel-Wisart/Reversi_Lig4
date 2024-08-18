@@ -43,7 +43,6 @@ void Jogadores::cadastrarJogador(const std::string &nome, const std::string &ape
 
     Jogador novoJogador(nome, apelido);
     jogadores.push_back(novoJogador);
-    std::cout << "Jogador " << apelido << " cadastrado com sucesso\n";
 }
 
 void Jogadores::removerJogador(const std::string &apelido)
@@ -53,7 +52,6 @@ void Jogadores::removerJogador(const std::string &apelido)
         if (it->getApelido() == apelido)
         {
             jogadores.erase(it);
-            std::cout << "Jogador " << apelido << " removido com sucesso\n";
             return;
         }
     }
