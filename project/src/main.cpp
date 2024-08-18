@@ -1,4 +1,6 @@
 #include <iostream>
+#include <thread>
+#include <mutex>
 #include "Reversi.hpp"
 #include "Lig4.hpp"
 #include "Jogador.hpp"

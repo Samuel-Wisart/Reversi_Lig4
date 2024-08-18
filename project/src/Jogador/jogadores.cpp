@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <filesystem> 
 
 const std::string arquivoJogadores = "../data/jogadores.csv";
 
@@ -20,10 +21,22 @@ Jogadores::Jogadores()
 
 void Jogadores::criarArquivoJogadores()
 {
+    // Verifica e cria o diretório se não existir
+    std::filesystem::path dir = "../data";
+    if (!std::filesystem::exists(dir))
+    {
+        if (!std::filesystem::create_directories(dir))
+        {
+            std::cerr << "Erro ao criar o diretório\n";
+            return;
+        }
+    }
+
+    // Cria o arquivo jogadores.csv
     std::ofstream file(arquivoJogadores);
     if (!file.is_open())
     {
-        std::cerr << "Erro ao criar arquivo\n";
+        std::cerr << "Erro ao criar o arquivo jogadores.csv\n";
         return;
     }
 
