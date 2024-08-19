@@ -6,7 +6,14 @@ Partida::Partida(Tabuleiro &jogo, Jogador &jogador1, Jogador &jogador2) : jogo(j
 
 void Partida::executarPartida()
 {
-    try {
+    int resultado = jogo.testarCondicaoVitoria('P');
+    if (resultado != ' ')
+    {
+        throw std::invalid_argument("Partida Invalida");
+    }
+
+    try
+    {
         char resultado;
         while (true)
         {
@@ -18,12 +25,20 @@ void Partida::executarPartida()
                 jogo.fazerJogada('B', jogada.first, jogada.second);
 
                 resultado = jogo.testarCondicaoVitoria('B');
+
                 if (resultado != ' ')
-                {   
+                {
+                    if (resultado == 'E')
+                    {
+                        jogo.imprimirTabuleiro();
+                        std::cout << "Empate!" << std::endl;
+                        atualizarEstatisticas(resultado);
+                        break;
+                    }
                     jogo.imprimirTabuleiro();
                     std::cout << "O jogador " << jogador1.getApelido() << " venceu!" << std::endl;
                     atualizarEstatisticas(resultado);
-                    break;  // Use break ao invés de return para não sair da função executarPartida.
+                    break;
                 }
             }
 
@@ -35,16 +50,26 @@ void Partida::executarPartida()
                 jogo.fazerJogada('P', jogada.first, jogada.second);
 
                 resultado = jogo.testarCondicaoVitoria('P');
+
                 if (resultado != ' ')
                 {
+                    if (resultado == 'E')
+                    {
+                        jogo.imprimirTabuleiro();
+                        std::cout << "Empate!" << std::endl;
+                        atualizarEstatisticas(resultado);
+                        break;
+                    }
                     jogo.imprimirTabuleiro();
                     std::cout << "O jogador " << jogador2.getApelido() << " venceu!" << std::endl;
                     atualizarEstatisticas(resultado);
-                    break;  // Use break ao invés de return para não sair da função executarPartida.
+                    break;
                 }
             }
         }
-    } catch (const std::exception &e) {
+    }
+    catch (const std::exception &e)
+    {
         std::cerr << "Erro durante a execucao da partida: " << e.what() << std::endl;
     }
 }
@@ -109,5 +134,4 @@ void Partida::atualizarEstatisticasLig4(char resultado)
     {
         throw std::invalid_argument("Resultado invalido");
     }
-
 }

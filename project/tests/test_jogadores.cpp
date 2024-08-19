@@ -1,8 +1,8 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "Jogador.hpp"
+#include <iostream>
 #include <fstream>
-#include <cstdio> // Para remover arquivos
+#include <cstdio> 
 
 // Helper function para limpar o ambiente de testes
 void limparArquivoJogadores() {
