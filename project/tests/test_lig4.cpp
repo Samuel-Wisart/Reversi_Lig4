@@ -8,11 +8,13 @@ TEST_CASE("Inicialização do tabuleiro Lig4") {
 
     CHECK(jogo.getAltura() == 6);
     CHECK(jogo.getLargura() == 7);
+    int casasVazias = 0;
     for (int i = 0; i < 7; i++) {
         for (int j = 0; j < 6; j++) {
-            CHECK(jogo.getCasa(i, j).getCor() == ' '); 
+            if(jogo.getCasa(i, j).getCor() == ' ') casasVazias++;
         }
     }
+    CHECK(casasVazias == 42);
 }
 
 TEST_CASE("Testar jogadas válidas no Lig4") {
