@@ -1,10 +1,10 @@
 # Jogo de Tabuleiro - Reversi e Lig4
 
-Aluno: Samuel Lucca Viana Miranda
-Matricula: 2022043566
-Link: https://github.com/Samuel-Wisart/Reversi_Lig4/tree/main
+**Aluno:** Samuel Lucca Viana Miranda  
+**Matrícula:** 2022043566  
+**Link do Repositório:** [GitHub - Reversi e Lig4](https://github.com/Samuel-Wisart/Reversi_Lig4/tree/main)
 
-Este projeto implementa dois jogos clássicos de tabuleiro: Reversi e Lig4. Ele foi desenvolvido em C++ utilizando uma arquitetura orientada a objetos, onde cada jogo é uma derivação de uma classe base `Tabuleiro`. Os jogadores podem disputar partidas em um tabuleiro virtual, e as estatísticas de vitória, derrota e empate são atualizadas automaticamente após cada jogo.
+Este projeto implementa dois jogos clássicos de tabuleiro: **Reversi** e **Lig4**. Desenvolvido em C++ utilizando uma arquitetura orientada a objetos, o projeto explora conceitos de herança, encapsulamento e polimorfismo. Cada jogo é uma derivação da classe base `Tabuleiro`, que define a estrutura fundamental para os jogos de tabuleiro implementados. Os jogadores podem disputar partidas em um tabuleiro virtual, e as estatísticas de vitória, derrota e empate são atualizadas automaticamente após cada jogo.
 
 ## Estrutura do Projeto
 
