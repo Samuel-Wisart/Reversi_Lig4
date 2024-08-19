@@ -1,3 +1,4 @@
-/obj/*
+/project/obj/*
 
 /data/*
+/project/data/*
