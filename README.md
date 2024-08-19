@@ -61,3 +61,8 @@ Compile o projeto utilizando o makefile com um compilador de c++ com a versao C+
 
 ```bash
 make
+```
+
+Para compilar e executar os testes use o comando:
+
+```make test```
