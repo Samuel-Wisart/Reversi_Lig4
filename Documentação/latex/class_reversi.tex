@@ -1,0 +1,238 @@
+\doxysection{Referência da Classe Reversi}
+\hypertarget{class_reversi}{}\label{class_reversi}\index{Reversi@{Reversi}}
+
+
+Classe que representa o jogo \doxylink{class_reversi}{Reversi}.  
+
+
+
+
+{\ttfamily \#include $<$Reversi.\+hpp$>$}
+
+Diagrama de hierarquia da classe Reversi\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_reversi}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reversi_adb24b921524176b7bf0a962889815b27}{Reversi}} (int altura, int largura)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}{\texorpdfstring{$\sim$}{\string~}\+Reversi}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reversi_ad2189f5129c406960c1144bc64398960}{fazer\+Jogada}} (char time, int x, int y) override
+\begin{DoxyCompactList}\small\item\em Realiza uma jogada no jogo \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_reversi_a2aac2fc0be4d6e17bb9164b09f2f2cdb}{testar\+Jogada}} (char time, int x, int y) override
+\begin{DoxyCompactList}\small\item\em Testa se a jogada é válida. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_reversi_a9786222de1ec2088809ae8e75b877d65}{checar\+Se\+Da\+Pra\+Jogar}} (char time)
+\begin{DoxyCompactList}\small\item\em Verifica se ainda é possível realizar jogadas válidas no tabuleiro. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_reversi_a2e26eedab6d98867acb7fdf89f698868}{testar\+Condicao\+Vitoria}} (char time) override
+\begin{DoxyCompactList}\small\item\em Testa as condições de vitória ou empate. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_reversi_a32fe04e48185f5c2894773e00c159179}{coletar\+Jogada}} (char time, std\+::string apelido) override
+\begin{DoxyCompactList}\small\item\em Coleta a jogada do jogador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tabuleiro_a6d81e6810dbd89ceb73300101f737dd0}{Tabuleiro}} (int altura, int largura)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_tabuleiro}{Tabuleiro}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{\texorpdfstring{$\sim$}{\string~}\+Tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_tabuleiro}{Tabuleiro}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tabuleiro_a18a1877c279dd04699e4438e085aaad4}{get\+Altura}} ()
+\item 
+int \mbox{\hyperlink{class_tabuleiro_ae672223b0b94e5aae6a22fc608d523d9}{get\+Largura}} ()
+\item 
+\mbox{\hyperlink{class_casa}{Casa}} \& \mbox{\hyperlink{class_tabuleiro_af8d33506c3ea6e340966373338b450c2}{get\+Casa}} (int x, int y)
+\item 
+virtual void \mbox{\hyperlink{class_tabuleiro_ae2e256e1bc632250b7fb59340e8ef81d}{imprimir\+Tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o estado atual do tabuleiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Atributos Públicos herdados de \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_casa}{Casa}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tabuleiro_ae09a79a917996e4a3d213bcb9b775738}{casas}}
+\begin{DoxyCompactList}\small\item\em Matriz de casas que compõem o tabuleiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa o jogo \doxylink{class_reversi}{Reversi}. 
+
+Herda da classe \doxylink{class_tabuleiro}{Tabuleiro} e implementa a lógica específica do jogo \doxylink{class_reversi}{Reversi}. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_reversi_adb24b921524176b7bf0a962889815b27}\index{Reversi@{Reversi}!Reversi@{Reversi}}
+\index{Reversi@{Reversi}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{Reversi()}{Reversi()}}
+{\footnotesize\ttfamily \label{class_reversi_adb24b921524176b7bf0a962889815b27} 
+Reversi\+::\+Reversi (\begin{DoxyParamCaption}\item[{int}]{altura}{, }\item[{int}]{largura}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_reversi}{Reversi}. 
+
+Inicializa o jogo \doxylink{class_reversi}{Reversi} com um tabuleiro de tamanho especificado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em altura} & Altura do tabuleiro. \\
+\hline
+{\em largura} & Largura do tabuleiro. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}\index{Reversi@{Reversi}!````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}}
+\index{````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Reversi()}{\string~Reversi()}}
+{\footnotesize\ttfamily \label{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940} 
+Reversi\+::\texorpdfstring{$\sim$}{\string~}\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destrutor da classe \doxylink{class_reversi}{Reversi}. 
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_reversi_a9786222de1ec2088809ae8e75b877d65}\index{Reversi@{Reversi}!checarSeDaPraJogar@{checarSeDaPraJogar}}
+\index{checarSeDaPraJogar@{checarSeDaPraJogar}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{checarSeDaPraJogar()}{checarSeDaPraJogar()}}
+{\footnotesize\ttfamily \label{class_reversi_a9786222de1ec2088809ae8e75b877d65} 
+bool Reversi\+::checar\+Se\+Da\+Pra\+Jogar (\begin{DoxyParamCaption}\item[{char}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Verifica se ainda é possível realizar jogadas válidas no tabuleiro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true Se ainda há jogadas possíveis. 
+
+false Se não há jogadas possíveis. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_tabuleiro_a272a0abc63ada963caaee447cf1f334e}{Tabuleiro}}.
+
+\Hypertarget{class_reversi_a32fe04e48185f5c2894773e00c159179}\index{Reversi@{Reversi}!coletarJogada@{coletarJogada}}
+\index{coletarJogada@{coletarJogada}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{coletarJogada()}{coletarJogada()}}
+{\footnotesize\ttfamily \label{class_reversi_a32fe04e48185f5c2894773e00c159179} 
+std\+::pair$<$ int, int $>$ Reversi\+::coletar\+Jogada (\begin{DoxyParamCaption}\item[{char}]{time}{, }\item[{std\+::string}]{apelido}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Coleta a jogada do jogador. 
+
+Solicita ao jogador as coordenadas x e y para a jogada e verifica sua validade.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+{\em apelido} & Apelido do jogador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::pair$<$int, int$>$ Par de coordenadas x e y onde a peça será jogada.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Se o time for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_tabuleiro_a6e62c3830007d4f16443690b921e9a53}{Tabuleiro}}.
+
+\Hypertarget{class_reversi_ad2189f5129c406960c1144bc64398960}\index{Reversi@{Reversi}!fazerJogada@{fazerJogada}}
+\index{fazerJogada@{fazerJogada}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{fazerJogada()}{fazerJogada()}}
+{\footnotesize\ttfamily \label{class_reversi_ad2189f5129c406960c1144bc64398960} 
+void Reversi\+::fazer\+Jogada (\begin{DoxyParamCaption}\item[{char}]{time}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Realiza uma jogada no jogo \doxylink{class_reversi}{Reversi}. 
+
+Verifica a validade da jogada e, se válida, realiza as alterações necessárias no tabuleiro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+{\em x} & Coordenada x onde a peça será jogada. \\
+\hline
+{\em y} & Coordenada y onde a peça será jogada.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Se a jogada não for válida. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_tabuleiro_a3278eeef3c7732e9522d1de3bd80fd26}{Tabuleiro}}.
+
+\Hypertarget{class_reversi_a2e26eedab6d98867acb7fdf89f698868}\index{Reversi@{Reversi}!testarCondicaoVitoria@{testarCondicaoVitoria}}
+\index{testarCondicaoVitoria@{testarCondicaoVitoria}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{testarCondicaoVitoria()}{testarCondicaoVitoria()}}
+{\footnotesize\ttfamily \label{class_reversi_a2e26eedab6d98867acb7fdf89f698868} 
+char Reversi\+::testar\+Condicao\+Vitoria (\begin{DoxyParamCaption}\item[{char}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Testa as condições de vitória ou empate. 
+
+Verifica se há um vencedor ou se o jogo terminou em empate.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char Caractere representando o vencedor (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}), \textquotesingle{}E\textquotesingle{} para empate, ou \textquotesingle{} \textquotesingle{} para continuar o jogo. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_tabuleiro_a6e2c23120592cbbf2248c483f334fbf8}{Tabuleiro}}.
+
+\Hypertarget{class_reversi_a2aac2fc0be4d6e17bb9164b09f2f2cdb}\index{Reversi@{Reversi}!testarJogada@{testarJogada}}
+\index{testarJogada@{testarJogada}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{testarJogada()}{testarJogada()}}
+{\footnotesize\ttfamily \label{class_reversi_a2aac2fc0be4d6e17bb9164b09f2f2cdb} 
+std\+::string Reversi\+::testar\+Jogada (\begin{DoxyParamCaption}\item[{char}]{time}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Testa se a jogada é válida. 
+
+Verifica as condições de validade da jogada, como posição dentro dos limites do tabuleiro e se a jogada respeita as regras do jogo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+{\em x} & Coordenada x da jogada. \\
+\hline
+{\em y} & Coordenada y da jogada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string "{}\+OK"{} se a jogada é válida, ou uma mensagem de erro se não for. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_tabuleiro_a4d7394d0b59dc2c93291f66492f7bb4e}{Tabuleiro}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Reversi\+\_\+\+Lig4/project/include/\mbox{\hyperlink{_reversi_8hpp}{Reversi.\+hpp}}\item 
+Reversi\+\_\+\+Lig4/project/src/\+Reversi/\mbox{\hyperlink{_reversi_8cpp}{Reversi.\+cpp}}\end{DoxyCompactItemize}

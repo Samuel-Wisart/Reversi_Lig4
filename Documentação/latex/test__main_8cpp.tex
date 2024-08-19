@@ -1,0 +1,92 @@
+\doxysection{Referência do Arquivo Reversi\+\_\+\+Lig4/project/tests/test\+\_\+main.cpp}
+\hypertarget{test__main_8cpp}{}\label{test__main_8cpp}\index{Reversi\_Lig4/project/tests/test\_main.cpp@{Reversi\_Lig4/project/tests/test\_main.cpp}}
+{\ttfamily \#include "{}doctest.\+h"{}}\newline
+{\ttfamily \#include "{}Jogador.\+hpp"{}}\newline
+{\ttfamily \#include "{}Partida.\+hpp"{}}\newline
+{\ttfamily \#include "{}Reversi.\+hpp"{}}\newline
+{\ttfamily \#include "{}Lig4.\+hpp"{}}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__main_8cpp_a623b8690a262536536a43eab2d7df03d}{DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\+\_\+\+WITH\+\_\+\+MAIN}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__main_8cpp_a2937fe1e369d7b048de5a2101ec1b847}{simular\+Cadastro}} (\mbox{\hyperlink{class_jogadores}{Jogadores}} \&jogadores, const std\+::string \&nome, const std\+::string \&apelido)
+\item 
+void \mbox{\hyperlink{test__main_8cpp_a4196610f97235b2f1b4a3f48f2073cde}{simular\+Remocao}} (\mbox{\hyperlink{class_jogadores}{Jogadores}} \&jogadores, const std\+::string \&apelido)
+\item 
+\mbox{\hyperlink{test__main_8cpp_a5b22c4fdeea9932de406f8c6eccacc28}{TEST\+\_\+\+CASE}} ("{}Testes para a funcao cadastrar\+Jogador"{})
+\item 
+\mbox{\hyperlink{test__main_8cpp_a61c2d5145391cd38a72de4ddd67d59c0}{TEST\+\_\+\+CASE}} ("{}Testes para a funcao remover\+Jogador"{})
+\item 
+\mbox{\hyperlink{test__main_8cpp_ac94d96d46b1a0388d3839264697e10c2}{TEST\+\_\+\+CASE}} ("{}Início de uma partida válida com \mbox{\hyperlink{class_lig4}{Lig4}} com jogadas simuladas"{})
+\item 
+\mbox{\hyperlink{test__main_8cpp_ac7738ff0ff80890cc84adcc5f9804002}{TEST\+\_\+\+CASE}} ("{}Início de uma partida válida com \mbox{\hyperlink{class_reversi}{Reversi}} com jogadas simuladas"{})
+\item 
+\mbox{\hyperlink{test__main_8cpp_ada125ff25e2b91de4fd160faf8078272}{TEST\+\_\+\+CASE}} ("{}Testes para a funcao coletar\+Jogada em Lig4"{})
+\item 
+\mbox{\hyperlink{test__main_8cpp_a5af7915683d38fdd16874db461d66cf8}{TEST\+\_\+\+CASE}} ("{}Testes para a funcao coletar\+Jogada em Reversi"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Definições e macros}
+\Hypertarget{test__main_8cpp_a623b8690a262536536a43eab2d7df03d}\index{test\_main.cpp@{test\_main.cpp}!DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN@{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}}
+\index{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN@{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}}
+{\footnotesize\ttfamily \label{test__main_8cpp_a623b8690a262536536a43eab2d7df03d} 
+\#define DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\+\_\+\+WITH\+\_\+\+MAIN}
+
+
+
+\doxysubsection{Funções}
+\Hypertarget{test__main_8cpp_a2937fe1e369d7b048de5a2101ec1b847}\index{test\_main.cpp@{test\_main.cpp}!simularCadastro@{simularCadastro}}
+\index{simularCadastro@{simularCadastro}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{simularCadastro()}{simularCadastro()}}
+{\footnotesize\ttfamily \label{test__main_8cpp_a2937fe1e369d7b048de5a2101ec1b847} 
+void simular\+Cadastro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jogadores}{Jogadores}} \&}]{jogadores}{, }\item[{const std\+::string \&}]{nome}{, }\item[{const std\+::string \&}]{apelido}{}\end{DoxyParamCaption})}
+
+\Hypertarget{test__main_8cpp_a4196610f97235b2f1b4a3f48f2073cde}\index{test\_main.cpp@{test\_main.cpp}!simularRemocao@{simularRemocao}}
+\index{simularRemocao@{simularRemocao}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{simularRemocao()}{simularRemocao()}}
+{\footnotesize\ttfamily \label{test__main_8cpp_a4196610f97235b2f1b4a3f48f2073cde} 
+void simular\+Remocao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jogadores}{Jogadores}} \&}]{jogadores}{, }\item[{const std\+::string \&}]{apelido}{}\end{DoxyParamCaption})}
+
+\Hypertarget{test__main_8cpp_ac94d96d46b1a0388d3839264697e10c2}\index{test\_main.cpp@{test\_main.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \label{test__main_8cpp_ac94d96d46b1a0388d3839264697e10c2} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Início de uma partida válida com \mbox{\hyperlink{class_lig4}{Lig4}} com jogadas simuladas"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{test__main_8cpp_ac7738ff0ff80890cc84adcc5f9804002}\index{test\_main.cpp@{test\_main.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \label{test__main_8cpp_ac7738ff0ff80890cc84adcc5f9804002} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Início de uma partida válida com \mbox{\hyperlink{class_reversi}{Reversi}} com jogadas simuladas"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{test__main_8cpp_a5b22c4fdeea9932de406f8c6eccacc28}\index{test\_main.cpp@{test\_main.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \label{test__main_8cpp_a5b22c4fdeea9932de406f8c6eccacc28} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testes para a funcao cadastrar\+Jogador"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{test__main_8cpp_ada125ff25e2b91de4fd160faf8078272}\index{test\_main.cpp@{test\_main.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \label{test__main_8cpp_ada125ff25e2b91de4fd160faf8078272} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testes para a funcao coletar\+Jogada em Lig4"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{test__main_8cpp_a5af7915683d38fdd16874db461d66cf8}\index{test\_main.cpp@{test\_main.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \label{test__main_8cpp_a5af7915683d38fdd16874db461d66cf8} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testes para a funcao coletar\+Jogada em Reversi"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{test__main_8cpp_a61c2d5145391cd38a72de4ddd67d59c0}\index{test\_main.cpp@{test\_main.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \label{test__main_8cpp_a61c2d5145391cd38a72de4ddd67d59c0} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testes para a funcao remover\+Jogador"{}}]{}{}\end{DoxyParamCaption})}
+

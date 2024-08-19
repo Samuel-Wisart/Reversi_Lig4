@@ -1,0 +1,37 @@
+\doxysection{Partida.\+hpp}
+\hypertarget{_partida_8hpp_source}{}\label{_partida_8hpp_source}\index{Reversi\_Lig4/project/include/Partida.hpp@{Reversi\_Lig4/project/include/Partida.hpp}}
+\mbox{\hyperlink{_partida_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PARTIDA\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PARTIDA\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tabuleiro_8hpp}{Tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_jogador_8hpp}{Jogador.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_reversi_8hpp}{Reversi.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_lig4_8hpp}{Lig4.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_partida}{Partida}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ \&jogo;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_jogador}{Jogador}}\ \&jogador1;\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_jogador}{Jogador}}\ \&jogador2;\ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_partida_a46abff807f83b872255ec40a5749764a}{Partida}}(\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\&\ jogo,\ \mbox{\hyperlink{class_jogador}{Jogador}}\&\ jogador1,\ \mbox{\hyperlink{class_jogador}{Jogador}}\&\ jogador2);}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_a89d06966f8131d37088a0e3992de53c6}{executarPartida}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_ab5bce1ab1daa1ca9dcd156daf5274bde}{atualizarEstatisticas}}(\textcolor{keywordtype}{char}\ resultado);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_a2d60f03c315d242e1d4c186a7ada496d}{atualizarEstatisticasReversi}}(\textcolor{keywordtype}{char}\ resultado);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_ada61048ea3226cb0523971cee75369ab}{atualizarEstatisticasLig4}}(\textcolor{keywordtype}{char}\ resultado);}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ std::string\ fazerJogada(\textcolor{keywordtype}{char}\ time);}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PARTIDA\_HPP}}
+
+\end{DoxyCode}

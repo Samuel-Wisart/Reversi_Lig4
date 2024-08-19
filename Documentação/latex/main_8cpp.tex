@@ -1,0 +1,115 @@
+\doxysection{Referência do Arquivo Reversi\+\_\+\+Lig4/project/src/main.cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{Reversi\_Lig4/project/src/main.cpp@{Reversi\_Lig4/project/src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include "{}Reversi.\+hpp"{}}\newline
+{\ttfamily \#include "{}Lig4.\+hpp"{}}\newline
+{\ttfamily \#include "{}Jogador.\+hpp"{}}\newline
+{\ttfamily \#include "{}Partida.\+hpp"{}}\newline
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a1b43c33343b92256c60247f96d71deeb}{menu\+Principal}} (\mbox{\hyperlink{class_jogadores}{Jogadores}} \&jogadores)
+\begin{DoxyCompactList}\small\item\em Exibe o menu principal e gerencia as interações com o usuário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ab6fc900d738e5ed7a18c39e2c95a5184}{cadastrar\+Jogador}} (\mbox{\hyperlink{class_jogadores}{Jogadores}} \&jogadores)
+\begin{DoxyCompactList}\small\item\em Cadastra um novo jogador no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_aed77088bc9abde3df27183c5e8733d41}{remover\+Jogador}} (\mbox{\hyperlink{class_jogadores}{Jogadores}} \&jogadores)
+\begin{DoxyCompactList}\small\item\em Remove um jogador cadastrado no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a578fe436c78daf6b48b6b45cb5706084}{listar\+Jogadores}} (\mbox{\hyperlink{class_jogadores}{Jogadores}} \&jogadores)
+\begin{DoxyCompactList}\small\item\em Lista todos os jogadores cadastrados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a452d991ddf72c0ca8e98f3340c6b1ec8}{iniciar\+Partida}} (\mbox{\hyperlink{class_jogadores}{Jogadores}} \&jogadores)
+\begin{DoxyCompactList}\small\item\em Inicia uma nova partida entre dois jogadores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Função principal que inicializa o sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções}
+\Hypertarget{main_8cpp_ab6fc900d738e5ed7a18c39e2c95a5184}\index{main.cpp@{main.cpp}!cadastrarJogador@{cadastrarJogador}}
+\index{cadastrarJogador@{cadastrarJogador}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{cadastrarJogador()}{cadastrarJogador()}}
+{\footnotesize\ttfamily \label{main_8cpp_ab6fc900d738e5ed7a18c39e2c95a5184} 
+void cadastrar\+Jogador (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jogadores}{Jogadores}} \&}]{jogadores}{}\end{DoxyParamCaption})}
+
+
+
+Cadastra um novo jogador no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogadores} & Referência ao objeto que gerencia os jogadores cadastrados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_a452d991ddf72c0ca8e98f3340c6b1ec8}\index{main.cpp@{main.cpp}!iniciarPartida@{iniciarPartida}}
+\index{iniciarPartida@{iniciarPartida}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{iniciarPartida()}{iniciarPartida()}}
+{\footnotesize\ttfamily \label{main_8cpp_a452d991ddf72c0ca8e98f3340c6b1ec8} 
+void iniciar\+Partida (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jogadores}{Jogadores}} \&}]{jogadores}{}\end{DoxyParamCaption})}
+
+
+
+Inicia uma nova partida entre dois jogadores. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogadores} & Referência ao objeto que gerencia os jogadores cadastrados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_a578fe436c78daf6b48b6b45cb5706084}\index{main.cpp@{main.cpp}!listarJogadores@{listarJogadores}}
+\index{listarJogadores@{listarJogadores}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{listarJogadores()}{listarJogadores()}}
+{\footnotesize\ttfamily \label{main_8cpp_a578fe436c78daf6b48b6b45cb5706084} 
+void listar\+Jogadores (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jogadores}{Jogadores}} \&}]{jogadores}{}\end{DoxyParamCaption})}
+
+
+
+Lista todos os jogadores cadastrados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogadores} & Referência ao objeto que gerencia os jogadores cadastrados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Função principal que inicializa o sistema. 
+
+\begin{DoxyReturn}{Retorna}
+int Código de status da aplicação. 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a1b43c33343b92256c60247f96d71deeb}\index{main.cpp@{main.cpp}!menuPrincipal@{menuPrincipal}}
+\index{menuPrincipal@{menuPrincipal}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{menuPrincipal()}{menuPrincipal()}}
+{\footnotesize\ttfamily \label{main_8cpp_a1b43c33343b92256c60247f96d71deeb} 
+void menu\+Principal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jogadores}{Jogadores}} \&}]{jogadores}{}\end{DoxyParamCaption})}
+
+
+
+Exibe o menu principal e gerencia as interações com o usuário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogadores} & Referência ao objeto que gerencia os jogadores cadastrados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_aed77088bc9abde3df27183c5e8733d41}\index{main.cpp@{main.cpp}!removerJogador@{removerJogador}}
+\index{removerJogador@{removerJogador}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{removerJogador()}{removerJogador()}}
+{\footnotesize\ttfamily \label{main_8cpp_aed77088bc9abde3df27183c5e8733d41} 
+void remover\+Jogador (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jogadores}{Jogadores}} \&}]{jogadores}{}\end{DoxyParamCaption})}
+
+
+
+Remove um jogador cadastrado no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogadores} & Referência ao objeto que gerencia os jogadores cadastrados. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,45 @@
+\doxysection{Referência do Arquivo Reversi\+\_\+\+Lig4/project/include/\+Jogador.hpp}
+\hypertarget{_jogador_8hpp}{}\label{_jogador_8hpp}\index{Reversi\_Lig4/project/include/Jogador.hpp@{Reversi\_Lig4/project/include/Jogador.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+\doxysubsubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_jogador}{Jogador}}
+\begin{DoxyCompactList}\small\item\em Classe que representa um jogador. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_jogadores}{Jogadores}}
+\begin{DoxyCompactList}\small\item\em Classe que gerencia uma coleção de jogadores. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_arquivo_nao_encontrado}{Arquivo\+Nao\+Encontrado}}
+\begin{DoxyCompactList}\small\item\em Exceção lançada quando o arquivo de jogadores não é encontrado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_jogador_8hpp_acd1ff7c81d447def36691dd88cef41b4}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_jogador}{Jogador}} \&jogador)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de inserção em fluxo para a classe \doxylink{class_jogador}{Jogador}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções}
+\Hypertarget{_jogador_8hpp_acd1ff7c81d447def36691dd88cef41b4}\index{Jogador.hpp@{Jogador.hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Jogador.hpp@{Jogador.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{_jogador_8hpp_acd1ff7c81d447def36691dd88cef41b4} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{class_jogador}{Jogador}} \&}]{jogador}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador de inserção em fluxo para a classe \doxylink{class_jogador}{Jogador}. 
+
+Exibe as informações do jogador no fluxo de saída.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em os} & Fluxo de saída onde as informações serão escritas. \\
+\hline
+{\em jogador} & Referência ao objeto \doxylink{class_jogador}{Jogador} cujas informações serão exibidas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::ostream\& Referência ao fluxo de saída modificado. 
+\end{DoxyReturn}

@@ -1,0 +1,131 @@
+\doxysection{Referência da Classe Casa}
+\hypertarget{class_casa}{}\label{class_casa}\index{Casa@{Casa}}
+
+
+Classe que representa uma casa no tabuleiro.  
+
+
+
+
+{\ttfamily \#include $<$Tabuleiro.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_casa_a91e63537f152f684c1948f690f528c90}{Casa}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_casa}{Casa}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_casa_a58113b068e02e8db79c603606243cc5a}{Casa}} (int x, int y, char cor)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_casa}{Casa} com cor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_casa_a50c13e044a5314c0693a206067b093ed}{\texorpdfstring{$\sim$}{\string~}\+Casa}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_casa}{Casa}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_casa_a6063d7507bfa12ff0d9563f30e3a3583}{getX}} ()
+\item 
+virtual int \mbox{\hyperlink{class_casa_ac24b72a2463990ebda234dbbbdab2143}{getY}} ()
+\item 
+virtual char \mbox{\hyperlink{class_casa_a18c17e8e581131976d95ae233ce0ea5f}{get\+Cor}} ()
+\item 
+virtual void \mbox{\hyperlink{class_casa_aca9134b3a73a59b6c3bfe933f61c507c}{set\+Cor}} (char cor)
+\item 
+virtual void \mbox{\hyperlink{class_casa_aa2fbc84a6165aedfccda831299964488}{imprimir\+Posicao}} ()
+\begin{DoxyCompactList}\small\item\em Imprime as coordenadas e a cor da casa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa uma casa no tabuleiro. 
+
+Cada casa possui coordenadas (x, y) e uma cor que indica o estado da casa. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_casa_a91e63537f152f684c1948f690f528c90}\index{Casa@{Casa}!Casa@{Casa}}
+\index{Casa@{Casa}!Casa@{Casa}}
+\doxysubsubsection{\texorpdfstring{Casa()}{Casa()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_casa_a91e63537f152f684c1948f690f528c90} 
+Casa\+::\+Casa (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_casa}{Casa}. 
+
+Inicializa uma casa com as coordenadas especificadas e sem cor definida.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Coordenada x da casa. \\
+\hline
+{\em y} & Coordenada y da casa. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_casa_a58113b068e02e8db79c603606243cc5a}\index{Casa@{Casa}!Casa@{Casa}}
+\index{Casa@{Casa}!Casa@{Casa}}
+\doxysubsubsection{\texorpdfstring{Casa()}{Casa()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_casa_a58113b068e02e8db79c603606243cc5a} 
+Casa\+::\+Casa (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{char}]{cor}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_casa}{Casa} com cor. 
+
+Inicializa uma casa com as coordenadas e a cor especificadas.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Coordenada x da casa. \\
+\hline
+{\em y} & Coordenada y da casa. \\
+\hline
+{\em cor} & Cor da casa. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_casa_a50c13e044a5314c0693a206067b093ed}\index{Casa@{Casa}!````~Casa@{\texorpdfstring{$\sim$}{\string~}Casa}}
+\index{````~Casa@{\texorpdfstring{$\sim$}{\string~}Casa}!Casa@{Casa}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Casa()}{\string~Casa()}}
+{\footnotesize\ttfamily \label{class_casa_a50c13e044a5314c0693a206067b093ed} 
+Casa\+::\texorpdfstring{$\sim$}{\string~}\+Casa (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destrutor da classe \doxylink{class_casa}{Casa}. 
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_casa_a18c17e8e581131976d95ae233ce0ea5f}\index{Casa@{Casa}!getCor@{getCor}}
+\index{getCor@{getCor}!Casa@{Casa}}
+\doxysubsubsection{\texorpdfstring{getCor()}{getCor()}}
+{\footnotesize\ttfamily \label{class_casa_a18c17e8e581131976d95ae233ce0ea5f} 
+char Casa\+::get\+Cor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_casa_a6063d7507bfa12ff0d9563f30e3a3583}\index{Casa@{Casa}!getX@{getX}}
+\index{getX@{getX}!Casa@{Casa}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \label{class_casa_a6063d7507bfa12ff0d9563f30e3a3583} 
+int Casa\+::getX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_casa_ac24b72a2463990ebda234dbbbdab2143}\index{Casa@{Casa}!getY@{getY}}
+\index{getY@{getY}!Casa@{Casa}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{class_casa_ac24b72a2463990ebda234dbbbdab2143} 
+int Casa\+::getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_casa_aa2fbc84a6165aedfccda831299964488}\index{Casa@{Casa}!imprimirPosicao@{imprimirPosicao}}
+\index{imprimirPosicao@{imprimirPosicao}!Casa@{Casa}}
+\doxysubsubsection{\texorpdfstring{imprimirPosicao()}{imprimirPosicao()}}
+{\footnotesize\ttfamily \label{class_casa_aa2fbc84a6165aedfccda831299964488} 
+void Casa\+::imprimir\+Posicao (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Imprime as coordenadas e a cor da casa. 
+
+\Hypertarget{class_casa_aca9134b3a73a59b6c3bfe933f61c507c}\index{Casa@{Casa}!setCor@{setCor}}
+\index{setCor@{setCor}!Casa@{Casa}}
+\doxysubsubsection{\texorpdfstring{setCor()}{setCor()}}
+{\footnotesize\ttfamily \label{class_casa_aca9134b3a73a59b6c3bfe933f61c507c} 
+void Casa\+::set\+Cor (\begin{DoxyParamCaption}\item[{char}]{cor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Reversi\+\_\+\+Lig4/project/include/\mbox{\hyperlink{_tabuleiro_8hpp}{Tabuleiro.\+hpp}}\item 
+Reversi\+\_\+\+Lig4/project/src/\+Tabuleiro/\mbox{\hyperlink{_casa_8cpp}{Casa.\+cpp}}\end{DoxyCompactItemize}

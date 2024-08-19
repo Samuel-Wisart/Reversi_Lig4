@@ -1,0 +1,157 @@
+\doxysection{Referência da Classe Jogadores}
+\hypertarget{class_jogadores}{}\label{class_jogadores}\index{Jogadores@{Jogadores}}
+
+
+Classe que gerencia uma coleção de jogadores.  
+
+
+
+
+{\ttfamily \#include $<$Jogador.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jogadores_a7ce59dd91823c2d9b4c45232ce14e007}{Jogadores}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_jogadores}{Jogadores}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogadores_a60c4048da2e7e741bc7effe10b2326df}{cadastrar\+Jogador}} (const std\+::string \&nome, const std\+::string \&apelido)
+\begin{DoxyCompactList}\small\item\em Cadastra um novo jogador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogadores_a079c120ced9b9fc5b31f2ed5b1b09ad9}{remover\+Jogador}} (const std\+::string \&apelido)
+\begin{DoxyCompactList}\small\item\em Remove um jogador da coleção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogadores_a0d59ecaf5931ce0e7c7e369162f1507f}{listar\+Jogadores}} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os jogadores cadastrados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogadores_a5478271a3839c0701c14e09ec399ff00}{salvar\+Jogadores}} ()
+\begin{DoxyCompactList}\small\item\em Salva os dados dos jogadores em um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogadores_a2fbb3075a650df7e7a152c3360cbaf34}{carregar\+Jogadores}} ()
+\begin{DoxyCompactList}\small\item\em Carrega os dados dos jogadores a partir de um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogadores_a5af0adce63888fae7126cb19461bf599}{criar\+Arquivo\+Jogadores}} ()
+\begin{DoxyCompactList}\small\item\em Cria o arquivo de jogadores, se ainda não existir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogadores_a6ef5cf46c8ac6f2d05ce154a65fa3def}{imprimir\+Jogadores}} ()
+\begin{DoxyCompactList}\small\item\em Imprime os dados dos jogadores cadastrados. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jogador}{Jogador}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_jogadores_ad016df2db850dc0ef40cfc7ec619d902}{buscar\+Jogador\+Por\+Apelido}} (const std\+::string \&apelido)
+\begin{DoxyCompactList}\small\item\em Busca um jogador pelo apelido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que gerencia uma coleção de jogadores. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_jogadores_a7ce59dd91823c2d9b4c45232ce14e007}\index{Jogadores@{Jogadores}!Jogadores@{Jogadores}}
+\index{Jogadores@{Jogadores}!Jogadores@{Jogadores}}
+\doxysubsubsection{\texorpdfstring{Jogadores()}{Jogadores()}}
+{\footnotesize\ttfamily \label{class_jogadores_a7ce59dd91823c2d9b4c45232ce14e007} 
+Jogadores\+::\+Jogadores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_jogadores}{Jogadores}. 
+
+Inicializa a coleção de jogadores e carrega os dados dos jogadores a partir do arquivo. 
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_jogadores_ad016df2db850dc0ef40cfc7ec619d902}\index{Jogadores@{Jogadores}!buscarJogadorPorApelido@{buscarJogadorPorApelido}}
+\index{buscarJogadorPorApelido@{buscarJogadorPorApelido}!Jogadores@{Jogadores}}
+\doxysubsubsection{\texorpdfstring{buscarJogadorPorApelido()}{buscarJogadorPorApelido()}}
+{\footnotesize\ttfamily \label{class_jogadores_ad016df2db850dc0ef40cfc7ec619d902} 
+\mbox{\hyperlink{class_jogador}{Jogador}} \texorpdfstring{$\ast$}{*} Jogadores\+::buscar\+Jogador\+Por\+Apelido (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{apelido}{}\end{DoxyParamCaption})}
+
+
+
+Busca um jogador pelo apelido. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido} & Apelido do jogador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Jogador\texorpdfstring{$\ast$}{*} Ponteiro para o jogador encontrado, ou nullptr se não encontrado. 
+\end{DoxyReturn}
+\Hypertarget{class_jogadores_a60c4048da2e7e741bc7effe10b2326df}\index{Jogadores@{Jogadores}!cadastrarJogador@{cadastrarJogador}}
+\index{cadastrarJogador@{cadastrarJogador}!Jogadores@{Jogadores}}
+\doxysubsubsection{\texorpdfstring{cadastrarJogador()}{cadastrarJogador()}}
+{\footnotesize\ttfamily \label{class_jogadores_a60c4048da2e7e741bc7effe10b2326df} 
+void Jogadores\+::cadastrar\+Jogador (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome}{, }\item[{const std\+::string \&}]{apelido}{}\end{DoxyParamCaption})}
+
+
+
+Cadastra um novo jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do jogador. \\
+\hline
+{\em apelido} & Apelido do jogador. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_jogadores_a2fbb3075a650df7e7a152c3360cbaf34}\index{Jogadores@{Jogadores}!carregarJogadores@{carregarJogadores}}
+\index{carregarJogadores@{carregarJogadores}!Jogadores@{Jogadores}}
+\doxysubsubsection{\texorpdfstring{carregarJogadores()}{carregarJogadores()}}
+{\footnotesize\ttfamily \label{class_jogadores_a2fbb3075a650df7e7a152c3360cbaf34} 
+void Jogadores\+::carregar\+Jogadores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Carrega os dados dos jogadores a partir de um arquivo. 
+
+\Hypertarget{class_jogadores_a5af0adce63888fae7126cb19461bf599}\index{Jogadores@{Jogadores}!criarArquivoJogadores@{criarArquivoJogadores}}
+\index{criarArquivoJogadores@{criarArquivoJogadores}!Jogadores@{Jogadores}}
+\doxysubsubsection{\texorpdfstring{criarArquivoJogadores()}{criarArquivoJogadores()}}
+{\footnotesize\ttfamily \label{class_jogadores_a5af0adce63888fae7126cb19461bf599} 
+void Jogadores\+::criar\+Arquivo\+Jogadores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Cria o arquivo de jogadores, se ainda não existir. 
+
+\Hypertarget{class_jogadores_a6ef5cf46c8ac6f2d05ce154a65fa3def}\index{Jogadores@{Jogadores}!imprimirJogadores@{imprimirJogadores}}
+\index{imprimirJogadores@{imprimirJogadores}!Jogadores@{Jogadores}}
+\doxysubsubsection{\texorpdfstring{imprimirJogadores()}{imprimirJogadores()}}
+{\footnotesize\ttfamily \label{class_jogadores_a6ef5cf46c8ac6f2d05ce154a65fa3def} 
+void Jogadores\+::imprimir\+Jogadores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Imprime os dados dos jogadores cadastrados. 
+
+\Hypertarget{class_jogadores_a0d59ecaf5931ce0e7c7e369162f1507f}\index{Jogadores@{Jogadores}!listarJogadores@{listarJogadores}}
+\index{listarJogadores@{listarJogadores}!Jogadores@{Jogadores}}
+\doxysubsubsection{\texorpdfstring{listarJogadores()}{listarJogadores()}}
+{\footnotesize\ttfamily \label{class_jogadores_a0d59ecaf5931ce0e7c7e369162f1507f} 
+void Jogadores\+::listar\+Jogadores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lista todos os jogadores cadastrados. 
+
+\Hypertarget{class_jogadores_a079c120ced9b9fc5b31f2ed5b1b09ad9}\index{Jogadores@{Jogadores}!removerJogador@{removerJogador}}
+\index{removerJogador@{removerJogador}!Jogadores@{Jogadores}}
+\doxysubsubsection{\texorpdfstring{removerJogador()}{removerJogador()}}
+{\footnotesize\ttfamily \label{class_jogadores_a079c120ced9b9fc5b31f2ed5b1b09ad9} 
+void Jogadores\+::remover\+Jogador (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{apelido}{}\end{DoxyParamCaption})}
+
+
+
+Remove um jogador da coleção. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido} & Apelido do jogador a ser removido. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_jogadores_a5478271a3839c0701c14e09ec399ff00}\index{Jogadores@{Jogadores}!salvarJogadores@{salvarJogadores}}
+\index{salvarJogadores@{salvarJogadores}!Jogadores@{Jogadores}}
+\doxysubsubsection{\texorpdfstring{salvarJogadores()}{salvarJogadores()}}
+{\footnotesize\ttfamily \label{class_jogadores_a5478271a3839c0701c14e09ec399ff00} 
+void Jogadores\+::salvar\+Jogadores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Salva os dados dos jogadores em um arquivo. 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Reversi\+\_\+\+Lig4/project/include/\mbox{\hyperlink{_jogador_8hpp}{Jogador.\+hpp}}\item 
+Reversi\+\_\+\+Lig4/project/src/\+Jogador/\mbox{\hyperlink{jogadores_8cpp}{jogadores.\+cpp}}\end{DoxyCompactItemize}

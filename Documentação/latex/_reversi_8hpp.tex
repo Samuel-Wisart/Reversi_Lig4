@@ -1,0 +1,67 @@
+\doxysection{Referência do Arquivo Reversi\+\_\+\+Lig4/project/include/\+Reversi.hpp}
+\hypertarget{_reversi_8hpp}{}\label{_reversi_8hpp}\index{Reversi\_Lig4/project/include/Reversi.hpp@{Reversi\_Lig4/project/include/Reversi.hpp}}
+{\ttfamily \#include "{}Tabuleiro.\+hpp"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_reversi}{Reversi}}
+\begin{DoxyCompactList}\small\item\em Classe que representa o jogo \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_reversi_8hpp_a45f1a45d626b5ca0051350bdd9f5e127}{mudar\+Cor}} (\mbox{\hyperlink{class_casa}{Casa}} \texorpdfstring{$\ast$}{*}casa)
+\begin{DoxyCompactList}\small\item\em Função auxiliar para mudar a cor de uma casa. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename V $>$ }\\std\+::vector$<$ V $>$ \& \mbox{\hyperlink{_reversi_8hpp_afde09605a6b4712bf5f3e23ea05d9513}{operator+=}} (std\+::vector$<$ V $>$ \&vec1, const std\+::vector$<$ V $>$ \&vec2)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador += para adicionar elementos de um vetor a outro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções}
+\Hypertarget{_reversi_8hpp_a45f1a45d626b5ca0051350bdd9f5e127}\index{Reversi.hpp@{Reversi.hpp}!mudarCor@{mudarCor}}
+\index{mudarCor@{mudarCor}!Reversi.hpp@{Reversi.hpp}}
+\doxysubsubsection{\texorpdfstring{mudarCor()}{mudarCor()}}
+{\footnotesize\ttfamily \label{_reversi_8hpp_a45f1a45d626b5ca0051350bdd9f5e127} 
+bool mudar\+Cor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_casa}{Casa}} \texorpdfstring{$\ast$}{*}}]{casa}{}\end{DoxyParamCaption})}
+
+
+
+Função auxiliar para mudar a cor de uma casa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em casa} & Ponteiro para a casa cuja cor será alterada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true Se a cor foi alterada com sucesso. 
+
+false Se a cor não foi alterada. 
+\end{DoxyReturn}
+\Hypertarget{_reversi_8hpp_afde09605a6b4712bf5f3e23ea05d9513}\index{Reversi.hpp@{Reversi.hpp}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Reversi.hpp@{Reversi.hpp}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \label{_reversi_8hpp_afde09605a6b4712bf5f3e23ea05d9513} 
+template$<$typename V $>$ \\
+std\+::vector$<$ V $>$ \& operator+= (\begin{DoxyParamCaption}\item[{std\+::vector$<$ V $>$ \&}]{vec1}{, }\item[{const std\+::vector$<$ V $>$ \&}]{vec2}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador += para adicionar elementos de um vetor a outro. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do template}
+{\em V} & Tipo dos elementos do vetor. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em vec1} & Vetor que receberá os elementos. \\
+\hline
+{\em vec2} & Vetor cujos elementos serão adicionados ao vec1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$\+V$>$\& Referência ao vetor vec1 após a adição dos elementos. 
+\end{DoxyReturn}

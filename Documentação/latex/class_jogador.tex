@@ -1,0 +1,221 @@
+\doxysection{Referência da Classe Jogador}
+\hypertarget{class_jogador}{}\label{class_jogador}\index{Jogador@{Jogador}}
+
+
+Classe que representa um jogador.  
+
+
+
+
+{\ttfamily \#include $<$Jogador.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jogador_ad3a89a4deb03e087c60761909c631adc}{Jogador}} (const std\+::string \&nome, const std\+::string \&apelido)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_jogador}{Jogador}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jogador_ac79de61097c2a5a7eed90bcf67ece367}{Jogador}} (const std\+::string \&nome, const std\+::string \&apelido, int vitorias\+Reversi, int derrotas\+Reversi, int empates\+Reversi, int vitorias\+Lig4, int derrotas\+Lig4, int empates\+Lig4)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_jogador}{Jogador} com estatísticas. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_jogador_a56f68b57e7fb229f932ef60d2116833c}{get\+Nome}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_jogador_aab1dd73438da8f07e1b9b8b9df0a5eb4}{get\+Apelido}} () const
+\item 
+int \mbox{\hyperlink{class_jogador_a68f9478b7320d8fc9755a179494b9540}{get\+Vitorias\+Reversi}} () const
+\item 
+int \mbox{\hyperlink{class_jogador_a9fb4c016cdd1f431592498e424abb949}{get\+Derrotas\+Reversi}} () const
+\item 
+int \mbox{\hyperlink{class_jogador_a0c57d1f601fbe345bd4dafbc43b955bc}{get\+Empates\+Reversi}} () const
+\item 
+int \mbox{\hyperlink{class_jogador_ab73305554133ef6b1f4c6e74052989ea}{get\+Vitorias\+Lig4}} () const
+\item 
+int \mbox{\hyperlink{class_jogador_aab3317ad34e3a92ccb6d0b4cecccc04e}{get\+Derrotas\+Lig4}} () const
+\item 
+int \mbox{\hyperlink{class_jogador_a83a59dc9348f74992da539e98a309b67}{get\+Empates\+Lig4}} () const
+\item 
+void \mbox{\hyperlink{class_jogador_ac89fc8105c34fdc83b8877b69f1ace76}{incrementar\+Vitorias\+Reversi}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa o número de vitórias do jogador no jogo \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_aac76395ba3543cd861471b621bb1a19e}{incrementar\+Derrotas\+Reversi}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa o número de derrotas do jogador no jogo \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_ab9e68cee9523667f2f0a4ed464648dd1}{incrementar\+Empates\+Reversi}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa o número de empates do jogador no jogo \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_a12ddae98c0d50cfb2bc0bd30de5530a1}{incrementar\+Vitorias\+Lig4}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa o número de vitórias do jogador no jogo \doxylink{class_lig4}{Lig4}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_ad3ce143a3afa857931656258d980f17c}{incrementar\+Derrotas\+Lig4}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa o número de derrotas do jogador no jogo \doxylink{class_lig4}{Lig4}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_a0c7bb5f534eda913e9d4202aece695a0}{incrementar\+Empates\+Lig4}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa o número de empates do jogador no jogo \doxylink{class_lig4}{Lig4}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um jogador. 
+
+Armazena o nome, apelido e as estatísticas de vitórias, derrotas e empates nos jogos \doxylink{class_reversi}{Reversi} e \doxylink{class_lig4}{Lig4}. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_jogador_ad3a89a4deb03e087c60761909c631adc}\index{Jogador@{Jogador}!Jogador@{Jogador}}
+\index{Jogador@{Jogador}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{Jogador()}{Jogador()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_jogador_ad3a89a4deb03e087c60761909c631adc} 
+Jogador\+::\+Jogador (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome}{, }\item[{const std\+::string \&}]{apelido}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_jogador}{Jogador}. 
+
+Inicializa um jogador com nome e apelido.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do jogador. \\
+\hline
+{\em apelido} & Apelido do jogador. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_jogador_ac79de61097c2a5a7eed90bcf67ece367}\index{Jogador@{Jogador}!Jogador@{Jogador}}
+\index{Jogador@{Jogador}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{Jogador()}{Jogador()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_jogador_ac79de61097c2a5a7eed90bcf67ece367} 
+Jogador\+::\+Jogador (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome}{, }\item[{const std\+::string \&}]{apelido}{, }\item[{int}]{vitorias\+Reversi}{, }\item[{int}]{derrotas\+Reversi}{, }\item[{int}]{empates\+Reversi}{, }\item[{int}]{vitorias\+Lig4}{, }\item[{int}]{derrotas\+Lig4}{, }\item[{int}]{empates\+Lig4}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_jogador}{Jogador} com estatísticas. 
+
+Inicializa um jogador com nome, apelido, e suas estatísticas de vitórias, derrotas e empates em dois jogos (\doxylink{class_reversi}{Reversi} e \doxylink{class_lig4}{Lig4}).
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do jogador. \\
+\hline
+{\em apelido} & Apelido do jogador. \\
+\hline
+{\em vitorias\+Reversi} & Número de vitórias no jogo \doxylink{class_reversi}{Reversi}. \\
+\hline
+{\em derrotas\+Reversi} & Número de derrotas no jogo \doxylink{class_reversi}{Reversi}. \\
+\hline
+{\em empates\+Reversi} & Número de empates no jogo \doxylink{class_reversi}{Reversi}. \\
+\hline
+{\em vitorias\+Lig4} & Número de vitórias no jogo \doxylink{class_lig4}{Lig4}. \\
+\hline
+{\em derrotas\+Lig4} & Número de derrotas no jogo \doxylink{class_lig4}{Lig4}. \\
+\hline
+{\em empates\+Lig4} & Número de empates no jogo \doxylink{class_lig4}{Lig4}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_jogador_aab1dd73438da8f07e1b9b8b9df0a5eb4}\index{Jogador@{Jogador}!getApelido@{getApelido}}
+\index{getApelido@{getApelido}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{getApelido()}{getApelido()}}
+{\footnotesize\ttfamily \label{class_jogador_aab1dd73438da8f07e1b9b8b9df0a5eb4} 
+std\+::string Jogador\+::get\+Apelido (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_jogador_aab3317ad34e3a92ccb6d0b4cecccc04e}\index{Jogador@{Jogador}!getDerrotasLig4@{getDerrotasLig4}}
+\index{getDerrotasLig4@{getDerrotasLig4}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{getDerrotasLig4()}{getDerrotasLig4()}}
+{\footnotesize\ttfamily \label{class_jogador_aab3317ad34e3a92ccb6d0b4cecccc04e} 
+int Jogador\+::get\+Derrotas\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_jogador_a9fb4c016cdd1f431592498e424abb949}\index{Jogador@{Jogador}!getDerrotasReversi@{getDerrotasReversi}}
+\index{getDerrotasReversi@{getDerrotasReversi}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{getDerrotasReversi()}{getDerrotasReversi()}}
+{\footnotesize\ttfamily \label{class_jogador_a9fb4c016cdd1f431592498e424abb949} 
+int Jogador\+::get\+Derrotas\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_jogador_a83a59dc9348f74992da539e98a309b67}\index{Jogador@{Jogador}!getEmpatesLig4@{getEmpatesLig4}}
+\index{getEmpatesLig4@{getEmpatesLig4}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{getEmpatesLig4()}{getEmpatesLig4()}}
+{\footnotesize\ttfamily \label{class_jogador_a83a59dc9348f74992da539e98a309b67} 
+int Jogador\+::get\+Empates\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_jogador_a0c57d1f601fbe345bd4dafbc43b955bc}\index{Jogador@{Jogador}!getEmpatesReversi@{getEmpatesReversi}}
+\index{getEmpatesReversi@{getEmpatesReversi}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{getEmpatesReversi()}{getEmpatesReversi()}}
+{\footnotesize\ttfamily \label{class_jogador_a0c57d1f601fbe345bd4dafbc43b955bc} 
+int Jogador\+::get\+Empates\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_jogador_a56f68b57e7fb229f932ef60d2116833c}\index{Jogador@{Jogador}!getNome@{getNome}}
+\index{getNome@{getNome}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily \label{class_jogador_a56f68b57e7fb229f932ef60d2116833c} 
+std\+::string Jogador\+::get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_jogador_ab73305554133ef6b1f4c6e74052989ea}\index{Jogador@{Jogador}!getVitoriasLig4@{getVitoriasLig4}}
+\index{getVitoriasLig4@{getVitoriasLig4}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{getVitoriasLig4()}{getVitoriasLig4()}}
+{\footnotesize\ttfamily \label{class_jogador_ab73305554133ef6b1f4c6e74052989ea} 
+int Jogador\+::get\+Vitorias\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_jogador_a68f9478b7320d8fc9755a179494b9540}\index{Jogador@{Jogador}!getVitoriasReversi@{getVitoriasReversi}}
+\index{getVitoriasReversi@{getVitoriasReversi}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{getVitoriasReversi()}{getVitoriasReversi()}}
+{\footnotesize\ttfamily \label{class_jogador_a68f9478b7320d8fc9755a179494b9540} 
+int Jogador\+::get\+Vitorias\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_jogador_ad3ce143a3afa857931656258d980f17c}\index{Jogador@{Jogador}!incrementarDerrotasLig4@{incrementarDerrotasLig4}}
+\index{incrementarDerrotasLig4@{incrementarDerrotasLig4}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{incrementarDerrotasLig4()}{incrementarDerrotasLig4()}}
+{\footnotesize\ttfamily \label{class_jogador_ad3ce143a3afa857931656258d980f17c} 
+void Jogador\+::incrementar\+Derrotas\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Incrementa o número de derrotas do jogador no jogo \doxylink{class_lig4}{Lig4}. 
+
+\Hypertarget{class_jogador_aac76395ba3543cd861471b621bb1a19e}\index{Jogador@{Jogador}!incrementarDerrotasReversi@{incrementarDerrotasReversi}}
+\index{incrementarDerrotasReversi@{incrementarDerrotasReversi}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{incrementarDerrotasReversi()}{incrementarDerrotasReversi()}}
+{\footnotesize\ttfamily \label{class_jogador_aac76395ba3543cd861471b621bb1a19e} 
+void Jogador\+::incrementar\+Derrotas\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Incrementa o número de derrotas do jogador no jogo \doxylink{class_reversi}{Reversi}. 
+
+\Hypertarget{class_jogador_a0c7bb5f534eda913e9d4202aece695a0}\index{Jogador@{Jogador}!incrementarEmpatesLig4@{incrementarEmpatesLig4}}
+\index{incrementarEmpatesLig4@{incrementarEmpatesLig4}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{incrementarEmpatesLig4()}{incrementarEmpatesLig4()}}
+{\footnotesize\ttfamily \label{class_jogador_a0c7bb5f534eda913e9d4202aece695a0} 
+void Jogador\+::incrementar\+Empates\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Incrementa o número de empates do jogador no jogo \doxylink{class_lig4}{Lig4}. 
+
+\Hypertarget{class_jogador_ab9e68cee9523667f2f0a4ed464648dd1}\index{Jogador@{Jogador}!incrementarEmpatesReversi@{incrementarEmpatesReversi}}
+\index{incrementarEmpatesReversi@{incrementarEmpatesReversi}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{incrementarEmpatesReversi()}{incrementarEmpatesReversi()}}
+{\footnotesize\ttfamily \label{class_jogador_ab9e68cee9523667f2f0a4ed464648dd1} 
+void Jogador\+::incrementar\+Empates\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Incrementa o número de empates do jogador no jogo \doxylink{class_reversi}{Reversi}. 
+
+\Hypertarget{class_jogador_a12ddae98c0d50cfb2bc0bd30de5530a1}\index{Jogador@{Jogador}!incrementarVitoriasLig4@{incrementarVitoriasLig4}}
+\index{incrementarVitoriasLig4@{incrementarVitoriasLig4}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{incrementarVitoriasLig4()}{incrementarVitoriasLig4()}}
+{\footnotesize\ttfamily \label{class_jogador_a12ddae98c0d50cfb2bc0bd30de5530a1} 
+void Jogador\+::incrementar\+Vitorias\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Incrementa o número de vitórias do jogador no jogo \doxylink{class_lig4}{Lig4}. 
+
+\Hypertarget{class_jogador_ac89fc8105c34fdc83b8877b69f1ace76}\index{Jogador@{Jogador}!incrementarVitoriasReversi@{incrementarVitoriasReversi}}
+\index{incrementarVitoriasReversi@{incrementarVitoriasReversi}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{incrementarVitoriasReversi()}{incrementarVitoriasReversi()}}
+{\footnotesize\ttfamily \label{class_jogador_ac89fc8105c34fdc83b8877b69f1ace76} 
+void Jogador\+::incrementar\+Vitorias\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Incrementa o número de vitórias do jogador no jogo \doxylink{class_reversi}{Reversi}. 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Reversi\+\_\+\+Lig4/project/include/\mbox{\hyperlink{_jogador_8hpp}{Jogador.\+hpp}}\item 
+Reversi\+\_\+\+Lig4/project/src/\+Jogador/\mbox{\hyperlink{jogador_8cpp}{jogador.\+cpp}}\end{DoxyCompactItemize}

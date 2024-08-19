@@ -1,0 +1,46 @@
+\doxysection{Reversi.\+hpp}
+\hypertarget{_reversi_8hpp_source}{}\label{_reversi_8hpp_source}\index{Reversi\_Lig4/project/include/Reversi.hpp@{Reversi\_Lig4/project/include/Reversi.hpp}}
+\mbox{\hyperlink{_reversi_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REVERSI\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REVERSI\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tabuleiro_8hpp}{Tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reversi}{Reversi}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_reversi_adb24b921524176b7bf0a962889815b27}{Reversi}}(\textcolor{keywordtype}{int}\ altura,\ \textcolor{keywordtype}{int}\ largura);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}{\string~Reversi}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reversi_ad2189f5129c406960c1144bc64398960}{fazerJogada}}(\textcolor{keywordtype}{char}\ time,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00054\ \ \ \ \ std::string\ \mbox{\hyperlink{class_reversi_a2aac2fc0be4d6e17bb9164b09f2f2cdb}{testarJogada}}(\textcolor{keywordtype}{char}\ time,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reversi_a9786222de1ec2088809ae8e75b877d65}{checarSeDaPraJogar}}(\textcolor{keywordtype}{char}\ time);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_reversi_a2e26eedab6d98867acb7fdf89f698868}{testarCondicaoVitoria}}(\textcolor{keywordtype}{char}\ time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00086\ \ \ \ \ std::pair<int,\ int>\ \mbox{\hyperlink{class_reversi_a32fe04e48185f5c2894773e00c159179}{coletarJogada}}(\textcolor{keywordtype}{char}\ time,\ std::string\ apelido)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00099\ \ \ \ \ std::vector<std::pair<int,\ int>>\ selecionarPecasAlteradas(\textcolor{keywordtype}{char}\ time,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00112\ \ \ \ \ std::vector<std::pair<int,\ int>>\ selecionarPecasAlteradas(\textcolor{keywordtype}{char}\ time,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{void}\ (direcionador)(\textcolor{keywordtype}{int}\&,\ \textcolor{keywordtype}{int}\&));}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00123\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_reversi_8hpp_a45f1a45d626b5ca0051350bdd9f5e127}{mudarCor}}(\mbox{\hyperlink{class_casa}{Casa}}\ *casa);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00134\ std::vector<V>\&\ \mbox{\hyperlink{_reversi_8hpp_afde09605a6b4712bf5f3e23ea05d9513}{operator+=}}(std::vector<V>\&\ vec1,\ \textcolor{keyword}{const}\ std::vector<V>\&\ vec2)\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ vec1.insert(vec1.end(),\ vec2.begin(),\ vec2.end());}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{return}\ vec1;}
+\DoxyCodeLine{00137\ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REVERSI\_HPP}}
+
+\end{DoxyCode}

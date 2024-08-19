@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reversi/Lig4: Código-Fonte de Reversi_Lig4/project/include/Tabuleiro.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Reversi/Lig4<span id="projectnumber">&#160;2.0</span>
+   </div>
+   <div id="projectbrief">Jogo pelo terminal de Reversi e Lig4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_9581213adc88692538d35c220abf2e36.html">Reversi_Lig4</a></li><li class="navelem"><a class="el" href="dir_d4d0e27a472355151978f7c7f79c5b8e.html">project</a></li><li class="navelem"><a class="el" href="dir_1d80cbd7d05926ea41287bcb176ed603.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">Tabuleiro.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_tabuleiro_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TABULEIRO_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TABULEIRO_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_casa.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_casa.html">Casa</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">int</span> x;      </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">int</span> y;      </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">char</span> cor;   </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="class_casa.html#a91e63537f152f684c1948f690f528c90">Casa</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="class_casa.html#a91e63537f152f684c1948f690f528c90">Casa</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">char</span> cor);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_casa.html#a50c13e044a5314c0693a206067b093ed">~Casa</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// Getters e setters (sem comentários conforme preferência)</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_casa.html#a6063d7507bfa12ff0d9563f30e3a3583">getX</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_casa.html#ac24b72a2463990ebda234dbbbdab2143">getY</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">virtual</span> <span class="keywordtype">char</span> <a class="code hl_function" href="class_casa.html#a18c17e8e581131976d95ae233ce0ea5f">getCor</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_casa.html#aca9134b3a73a59b6c3bfe933f61c507c">setCor</a>(<span class="keywordtype">char</span> cor);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_casa.html#aa2fbc84a6165aedfccda831299964488">imprimirPosicao</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_tabuleiro.html">   64</a></span><span class="keyword">class </span><a class="code hl_class" href="class_tabuleiro.html">Tabuleiro</a></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">int</span> altura;    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">int</span> largura;   </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#ae09a79a917996e4a3d213bcb9b775738">   71</a></span>    <a class="code hl_class" href="class_casa.html">Casa</a> ***<a class="code hl_variable" href="class_tabuleiro.html#ae09a79a917996e4a3d213bcb9b775738">casas</a>; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="class_tabuleiro.html#a6d81e6810dbd89ceb73300101f737dd0">Tabuleiro</a>(<span class="keywordtype">int</span> altura, <span class="keywordtype">int</span> largura);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_tabuleiro.html#a25dfc7efac326aff2cdb7dd8a3b8b084">~Tabuleiro</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// Getters (sem comentários conforme preferência)</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_tabuleiro.html#a18a1877c279dd04699e4438e085aaad4">getAltura</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_tabuleiro.html#ae672223b0b94e5aae6a22fc608d523d9">getLargura</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_class" href="class_casa.html">Casa</a>&amp; <a class="code hl_function" href="class_tabuleiro.html#af8d33506c3ea6e340966373338b450c2">getCasa</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a3278eeef3c7732e9522d1de3bd80fd26">  105</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_tabuleiro.html#a3278eeef3c7732e9522d1de3bd80fd26">fazerJogada</a>(<span class="keywordtype">char</span> time, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) = 0;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a4d7394d0b59dc2c93291f66492f7bb4e">  117</a></span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_tabuleiro.html#a4d7394d0b59dc2c93291f66492f7bb4e">testarJogada</a>(<span class="keywordtype">char</span> time, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) = 0;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a272a0abc63ada963caaee447cf1f334e">  128</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_tabuleiro.html#a272a0abc63ada963caaee447cf1f334e">checarSeDaPraJogar</a>(<span class="keywordtype">char</span> time) = 0;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a6e2c23120592cbbf2248c483f334fbf8">  138</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">char</span> <a class="code hl_function" href="class_tabuleiro.html#a6e2c23120592cbbf2248c483f334fbf8">testarCondicaoVitoria</a>(<span class="keywordtype">char</span> time) = 0;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a6e62c3830007d4f16443690b921e9a53">  149</a></span>    <span class="keyword">virtual</span> std::pair&lt;int, int&gt; <a class="code hl_function" href="class_tabuleiro.html#a6e62c3830007d4f16443690b921e9a53">coletarJogada</a>(<span class="keywordtype">char</span> time, std::string apelido) = 0;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_tabuleiro.html#ae2e256e1bc632250b7fb59340e8ef81d">imprimirTabuleiro</a>();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>};</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keywordtype">char</span> <a class="code hl_function" href="_tabuleiro_8hpp.html#ade1a54058a183a34692a5a03ac8deb63">numeroParaLetra</a>(<span class="keywordtype">int</span> numero);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">#endif </span><span class="comment">// TABULEIRO_HPP</span></div>
+<div class="ttc" id="a_tabuleiro_8hpp_html_ade1a54058a183a34692a5a03ac8deb63"><div class="ttname"><a href="_tabuleiro_8hpp.html#ade1a54058a183a34692a5a03ac8deb63">numeroParaLetra</a></div><div class="ttdeci">char numeroParaLetra(int numero)</div><div class="ttdoc">Converte um número em uma letra correspondente.</div><div class="ttdef"><b>Definição</b> Casa.cpp:47</div></div>
+<div class="ttc" id="aclass_casa_html"><div class="ttname"><a href="class_casa.html">Casa</a></div><div class="ttdoc">Classe que representa uma casa no tabuleiro.</div><div class="ttdef"><b>Definição</b> Tabuleiro.hpp:12</div></div>
+<div class="ttc" id="aclass_casa_html_a18c17e8e581131976d95ae233ce0ea5f"><div class="ttname"><a href="class_casa.html#a18c17e8e581131976d95ae233ce0ea5f">Casa::getCor</a></div><div class="ttdeci">virtual char getCor()</div><div class="ttdef"><b>Definição</b> Casa.cpp:20</div></div>
+<div class="ttc" id="aclass_casa_html_a50c13e044a5314c0693a206067b093ed"><div class="ttname"><a href="class_casa.html#a50c13e044a5314c0693a206067b093ed">Casa::~Casa</a></div><div class="ttdeci">virtual ~Casa()</div><div class="ttdoc">Destrutor da classe Casa.</div><div class="ttdef"><b>Definição</b> Casa.cpp:18</div></div>
+<div class="ttc" id="aclass_casa_html_a6063d7507bfa12ff0d9563f30e3a3583"><div class="ttname"><a href="class_casa.html#a6063d7507bfa12ff0d9563f30e3a3583">Casa::getX</a></div><div class="ttdeci">virtual int getX()</div><div class="ttdef"><b>Definição</b> Casa.cpp:25</div></div>
+<div class="ttc" id="aclass_casa_html_a91e63537f152f684c1948f690f528c90"><div class="ttname"><a href="class_casa.html#a91e63537f152f684c1948f690f528c90">Casa::Casa</a></div><div class="ttdeci">Casa(int x, int y)</div><div class="ttdoc">Construtor da classe Casa.</div><div class="ttdef"><b>Definição</b> Casa.cpp:4</div></div>
+<div class="ttc" id="aclass_casa_html_aa2fbc84a6165aedfccda831299964488"><div class="ttname"><a href="class_casa.html#aa2fbc84a6165aedfccda831299964488">Casa::imprimirPosicao</a></div><div class="ttdeci">virtual void imprimirPosicao()</div><div class="ttdoc">Imprime as coordenadas e a cor da casa.</div><div class="ttdef"><b>Definição</b> Casa.cpp:42</div></div>
+<div class="ttc" id="aclass_casa_html_ac24b72a2463990ebda234dbbbdab2143"><div class="ttname"><a href="class_casa.html#ac24b72a2463990ebda234dbbbdab2143">Casa::getY</a></div><div class="ttdeci">virtual int getY()</div><div class="ttdef"><b>Definição</b> Casa.cpp:30</div></div>
+<div class="ttc" id="aclass_casa_html_aca9134b3a73a59b6c3bfe933f61c507c"><div class="ttname"><a href="class_casa.html#aca9134b3a73a59b6c3bfe933f61c507c">Casa::setCor</a></div><div class="ttdeci">virtual void setCor(char cor)</div><div class="ttdef"><b>Definição</b> Casa.cpp:35</div></div>
+<div class="ttc" id="aclass_tabuleiro_html"><div class="ttname"><a href="class_tabuleiro.html">Tabuleiro</a></div><div class="ttdoc">Classe que representa um tabuleiro de jogo.</div><div class="ttdef"><b>Definição</b> Tabuleiro.hpp:65</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a18a1877c279dd04699e4438e085aaad4"><div class="ttname"><a href="class_tabuleiro.html#a18a1877c279dd04699e4438e085aaad4">Tabuleiro::getAltura</a></div><div class="ttdeci">int getAltura()</div><div class="ttdef"><b>Definição</b> Tabuleiro.cpp:31</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a25dfc7efac326aff2cdb7dd8a3b8b084"><div class="ttname"><a href="class_tabuleiro.html#a25dfc7efac326aff2cdb7dd8a3b8b084">Tabuleiro::~Tabuleiro</a></div><div class="ttdeci">virtual ~Tabuleiro()</div><div class="ttdoc">Destrutor da classe Tabuleiro.</div><div class="ttdef"><b>Definição</b> Tabuleiro.cpp:18</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a272a0abc63ada963caaee447cf1f334e"><div class="ttname"><a href="class_tabuleiro.html#a272a0abc63ada963caaee447cf1f334e">Tabuleiro::checarSeDaPraJogar</a></div><div class="ttdeci">virtual bool checarSeDaPraJogar(char time)=0</div><div class="ttdoc">Verifica se ainda é possível realizar jogadas válidas no tabuleiro.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a3278eeef3c7732e9522d1de3bd80fd26"><div class="ttname"><a href="class_tabuleiro.html#a3278eeef3c7732e9522d1de3bd80fd26">Tabuleiro::fazerJogada</a></div><div class="ttdeci">virtual void fazerJogada(char time, int x, int y)=0</div><div class="ttdoc">Realiza uma jogada no tabuleiro.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a4d7394d0b59dc2c93291f66492f7bb4e"><div class="ttname"><a href="class_tabuleiro.html#a4d7394d0b59dc2c93291f66492f7bb4e">Tabuleiro::testarJogada</a></div><div class="ttdeci">virtual std::string testarJogada(char time, int x, int y)=0</div><div class="ttdoc">Testa se a jogada é válida.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a6d81e6810dbd89ceb73300101f737dd0"><div class="ttname"><a href="class_tabuleiro.html#a6d81e6810dbd89ceb73300101f737dd0">Tabuleiro::Tabuleiro</a></div><div class="ttdeci">Tabuleiro(int altura, int largura)</div><div class="ttdoc">Construtor da classe Tabuleiro.</div><div class="ttdef"><b>Definição</b> Tabuleiro.cpp:4</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a6e2c23120592cbbf2248c483f334fbf8"><div class="ttname"><a href="class_tabuleiro.html#a6e2c23120592cbbf2248c483f334fbf8">Tabuleiro::testarCondicaoVitoria</a></div><div class="ttdeci">virtual char testarCondicaoVitoria(char time)=0</div><div class="ttdoc">Testa as condições de vitória ou empate.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a6e62c3830007d4f16443690b921e9a53"><div class="ttname"><a href="class_tabuleiro.html#a6e62c3830007d4f16443690b921e9a53">Tabuleiro::coletarJogada</a></div><div class="ttdeci">virtual std::pair&lt; int, int &gt; coletarJogada(char time, std::string apelido)=0</div><div class="ttdoc">Coleta a jogada do jogador.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_ae09a79a917996e4a3d213bcb9b775738"><div class="ttname"><a href="class_tabuleiro.html#ae09a79a917996e4a3d213bcb9b775738">Tabuleiro::casas</a></div><div class="ttdeci">Casa *** casas</div><div class="ttdoc">Matriz de casas que compõem o tabuleiro.</div><div class="ttdef"><b>Definição</b> Tabuleiro.hpp:71</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_ae2e256e1bc632250b7fb59340e8ef81d"><div class="ttname"><a href="class_tabuleiro.html#ae2e256e1bc632250b7fb59340e8ef81d">Tabuleiro::imprimirTabuleiro</a></div><div class="ttdeci">virtual void imprimirTabuleiro()</div><div class="ttdoc">Imprime o estado atual do tabuleiro.</div><div class="ttdef"><b>Definição</b> Tabuleiro.cpp:49</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_ae672223b0b94e5aae6a22fc608d523d9"><div class="ttname"><a href="class_tabuleiro.html#ae672223b0b94e5aae6a22fc608d523d9">Tabuleiro::getLargura</a></div><div class="ttdeci">int getLargura()</div><div class="ttdef"><b>Definição</b> Tabuleiro.cpp:36</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_af8d33506c3ea6e340966373338b450c2"><div class="ttname"><a href="class_tabuleiro.html#af8d33506c3ea6e340966373338b450c2">Tabuleiro::getCasa</a></div><div class="ttdeci">Casa &amp; getCasa(int x, int y)</div><div class="ttdef"><b>Definição</b> Tabuleiro.cpp:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

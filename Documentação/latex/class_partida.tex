@@ -1,0 +1,115 @@
+\doxysection{Referência da Classe Partida}
+\hypertarget{class_partida}{}\label{class_partida}\index{Partida@{Partida}}
+
+
+Classe que representa uma partida entre dois jogadores em um jogo de tabuleiro.  
+
+
+
+
+{\ttfamily \#include $<$Partida.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_partida_a46abff807f83b872255ec40a5749764a}{Partida}} (\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} \&jogo, \mbox{\hyperlink{class_jogador}{Jogador}} \&jogador1, \mbox{\hyperlink{class_jogador}{Jogador}} \&jogador2)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_partida}{Partida}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partida_a89d06966f8131d37088a0e3992de53c6}{executar\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Executa a partida entre os dois jogadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partida_ab5bce1ab1daa1ca9dcd156daf5274bde}{atualizar\+Estatisticas}} (char resultado)
+\begin{DoxyCompactList}\small\item\em Atualiza as estatísticas dos jogadores com base no resultado da partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partida_a2d60f03c315d242e1d4c186a7ada496d}{atualizar\+Estatisticas\+Reversi}} (char resultado)
+\begin{DoxyCompactList}\small\item\em Atualiza as estatísticas dos jogadores especificamente para o jogo \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partida_ada61048ea3226cb0523971cee75369ab}{atualizar\+Estatisticas\+Lig4}} (char resultado)
+\begin{DoxyCompactList}\small\item\em Atualiza as estatísticas dos jogadores especificamente para o jogo \doxylink{class_lig4}{Lig4}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa uma partida entre dois jogadores em um jogo de tabuleiro. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_partida_a46abff807f83b872255ec40a5749764a}\index{Partida@{Partida}!Partida@{Partida}}
+\index{Partida@{Partida}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{Partida()}{Partida()}}
+{\footnotesize\ttfamily \label{class_partida_a46abff807f83b872255ec40a5749764a} 
+Partida\+::\+Partida (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} \&}]{jogo}{, }\item[{\mbox{\hyperlink{class_jogador}{Jogador}} \&}]{jogador1}{, }\item[{\mbox{\hyperlink{class_jogador}{Jogador}} \&}]{jogador2}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_partida}{Partida}. 
+
+Inicializa uma nova partida entre dois jogadores em um jogo de tabuleiro específico.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogo} & Referência ao objeto \doxylink{class_tabuleiro}{Tabuleiro} que representa o jogo. \\
+\hline
+{\em jogador1} & Referência ao primeiro jogador. \\
+\hline
+{\em jogador2} & Referência ao segundo jogador. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_partida_ab5bce1ab1daa1ca9dcd156daf5274bde}\index{Partida@{Partida}!atualizarEstatisticas@{atualizarEstatisticas}}
+\index{atualizarEstatisticas@{atualizarEstatisticas}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{atualizarEstatisticas()}{atualizarEstatisticas()}}
+{\footnotesize\ttfamily \label{class_partida_ab5bce1ab1daa1ca9dcd156daf5274bde} 
+void Partida\+::atualizar\+Estatisticas (\begin{DoxyParamCaption}\item[{char}]{resultado}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza as estatísticas dos jogadores com base no resultado da partida. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em resultado} & Caractere que representa o resultado da partida (\textquotesingle{}B\textquotesingle{} para jogador1, \textquotesingle{}P\textquotesingle{} para jogador2, \textquotesingle{}E\textquotesingle{} para empate). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_partida_ada61048ea3226cb0523971cee75369ab}\index{Partida@{Partida}!atualizarEstatisticasLig4@{atualizarEstatisticasLig4}}
+\index{atualizarEstatisticasLig4@{atualizarEstatisticasLig4}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{atualizarEstatisticasLig4()}{atualizarEstatisticasLig4()}}
+{\footnotesize\ttfamily \label{class_partida_ada61048ea3226cb0523971cee75369ab} 
+void Partida\+::atualizar\+Estatisticas\+Lig4 (\begin{DoxyParamCaption}\item[{char}]{resultado}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza as estatísticas dos jogadores especificamente para o jogo \doxylink{class_lig4}{Lig4}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em resultado} & Caractere que representa o resultado da partida em \doxylink{class_lig4}{Lig4} (\textquotesingle{}B\textquotesingle{} para jogador1, \textquotesingle{}P\textquotesingle{} para jogador2, \textquotesingle{}E\textquotesingle{} para empate). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_partida_a2d60f03c315d242e1d4c186a7ada496d}\index{Partida@{Partida}!atualizarEstatisticasReversi@{atualizarEstatisticasReversi}}
+\index{atualizarEstatisticasReversi@{atualizarEstatisticasReversi}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{atualizarEstatisticasReversi()}{atualizarEstatisticasReversi()}}
+{\footnotesize\ttfamily \label{class_partida_a2d60f03c315d242e1d4c186a7ada496d} 
+void Partida\+::atualizar\+Estatisticas\+Reversi (\begin{DoxyParamCaption}\item[{char}]{resultado}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza as estatísticas dos jogadores especificamente para o jogo \doxylink{class_reversi}{Reversi}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em resultado} & Caractere que representa o resultado da partida em \doxylink{class_reversi}{Reversi} (\textquotesingle{}B\textquotesingle{} para jogador1, \textquotesingle{}P\textquotesingle{} para jogador2, \textquotesingle{}E\textquotesingle{} para empate). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_partida_a89d06966f8131d37088a0e3992de53c6}\index{Partida@{Partida}!executarPartida@{executarPartida}}
+\index{executarPartida@{executarPartida}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{executarPartida()}{executarPartida()}}
+{\footnotesize\ttfamily \label{class_partida_a89d06966f8131d37088a0e3992de53c6} 
+void Partida\+::executar\+Partida (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Executa a partida entre os dois jogadores. 
+
+Controla o fluxo do jogo até que haja um vencedor ou empate. 
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Reversi\+\_\+\+Lig4/project/include/\mbox{\hyperlink{_partida_8hpp}{Partida.\+hpp}}\item 
+Reversi\+\_\+\+Lig4/project/src/\+Partida/\mbox{\hyperlink{_partida_8cpp}{Partida.\+cpp}}\end{DoxyCompactItemize}

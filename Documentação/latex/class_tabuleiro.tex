@@ -1,0 +1,267 @@
+\doxysection{Referência da Classe Tabuleiro}
+\hypertarget{class_tabuleiro}{}\label{class_tabuleiro}\index{Tabuleiro@{Tabuleiro}}
+
+
+Classe que representa um tabuleiro de jogo.  
+
+
+
+
+{\ttfamily \#include $<$Tabuleiro.\+hpp$>$}
+
+Diagrama de hierarquia da classe Tabuleiro\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tabuleiro}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tabuleiro_a6d81e6810dbd89ceb73300101f737dd0}{Tabuleiro}} (int altura, int largura)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_tabuleiro}{Tabuleiro}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{\texorpdfstring{$\sim$}{\string~}\+Tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_tabuleiro}{Tabuleiro}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tabuleiro_a18a1877c279dd04699e4438e085aaad4}{get\+Altura}} ()
+\item 
+int \mbox{\hyperlink{class_tabuleiro_ae672223b0b94e5aae6a22fc608d523d9}{get\+Largura}} ()
+\item 
+\mbox{\hyperlink{class_casa}{Casa}} \& \mbox{\hyperlink{class_tabuleiro_af8d33506c3ea6e340966373338b450c2}{get\+Casa}} (int x, int y)
+\item 
+virtual void \mbox{\hyperlink{class_tabuleiro_a3278eeef3c7732e9522d1de3bd80fd26}{fazer\+Jogada}} (char time, int x, int y)=0
+\begin{DoxyCompactList}\small\item\em Realiza uma jogada no tabuleiro. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_tabuleiro_a4d7394d0b59dc2c93291f66492f7bb4e}{testar\+Jogada}} (char time, int x, int y)=0
+\begin{DoxyCompactList}\small\item\em Testa se a jogada é válida. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_tabuleiro_a272a0abc63ada963caaee447cf1f334e}{checar\+Se\+Da\+Pra\+Jogar}} (char time)=0
+\begin{DoxyCompactList}\small\item\em Verifica se ainda é possível realizar jogadas válidas no tabuleiro. \end{DoxyCompactList}\item 
+virtual char \mbox{\hyperlink{class_tabuleiro_a6e2c23120592cbbf2248c483f334fbf8}{testar\+Condicao\+Vitoria}} (char time)=0
+\begin{DoxyCompactList}\small\item\em Testa as condições de vitória ou empate. \end{DoxyCompactList}\item 
+virtual std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_tabuleiro_a6e62c3830007d4f16443690b921e9a53}{coletar\+Jogada}} (char time, std\+::string apelido)=0
+\begin{DoxyCompactList}\small\item\em Coleta a jogada do jogador. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_tabuleiro_ae2e256e1bc632250b7fb59340e8ef81d}{imprimir\+Tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o estado atual do tabuleiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_casa}{Casa}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tabuleiro_ae09a79a917996e4a3d213bcb9b775738}{casas}}
+\begin{DoxyCompactList}\small\item\em Matriz de casas que compõem o tabuleiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um tabuleiro de jogo. 
+
+Esta classe é abstrata e deve ser herdada por jogos específicos. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_tabuleiro_a6d81e6810dbd89ceb73300101f737dd0}\index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{Tabuleiro()}{Tabuleiro()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a6d81e6810dbd89ceb73300101f737dd0} 
+Tabuleiro\+::\+Tabuleiro (\begin{DoxyParamCaption}\item[{int}]{altura}{, }\item[{int}]{largura}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_tabuleiro}{Tabuleiro}. 
+
+Inicializa um tabuleiro com a altura e largura especificadas.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em altura} & Altura do tabuleiro. \\
+\hline
+{\em largura} & Largura do tabuleiro. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}\index{Tabuleiro@{Tabuleiro}!````~Tabuleiro@{\texorpdfstring{$\sim$}{\string~}Tabuleiro}}
+\index{````~Tabuleiro@{\texorpdfstring{$\sim$}{\string~}Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Tabuleiro()}{\string~Tabuleiro()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084} 
+Tabuleiro\+::\texorpdfstring{$\sim$}{\string~}\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destrutor da classe \doxylink{class_tabuleiro}{Tabuleiro}. 
+
+Libera a memória alocada para as casas do tabuleiro. 
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_tabuleiro_a272a0abc63ada963caaee447cf1f334e}\index{Tabuleiro@{Tabuleiro}!checarSeDaPraJogar@{checarSeDaPraJogar}}
+\index{checarSeDaPraJogar@{checarSeDaPraJogar}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{checarSeDaPraJogar()}{checarSeDaPraJogar()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a272a0abc63ada963caaee447cf1f334e} 
+virtual bool Tabuleiro\+::checar\+Se\+Da\+Pra\+Jogar (\begin{DoxyParamCaption}\item[{char}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Verifica se ainda é possível realizar jogadas válidas no tabuleiro. 
+
+Método abstrato que deve ser implementado nas classes derivadas.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true Se ainda há jogadas possíveis. 
+
+false Se não há jogadas possíveis. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_lig4_aeb5b7a69c08d259ea56fb58de2d8c2a9}{Lig4}} e \mbox{\hyperlink{class_reversi_a9786222de1ec2088809ae8e75b877d65}{Reversi}}.
+
+\Hypertarget{class_tabuleiro_a6e62c3830007d4f16443690b921e9a53}\index{Tabuleiro@{Tabuleiro}!coletarJogada@{coletarJogada}}
+\index{coletarJogada@{coletarJogada}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{coletarJogada()}{coletarJogada()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a6e62c3830007d4f16443690b921e9a53} 
+virtual std\+::pair$<$ int, int $>$ Tabuleiro\+::coletar\+Jogada (\begin{DoxyParamCaption}\item[{char}]{time}{, }\item[{std\+::string}]{apelido}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Coleta a jogada do jogador. 
+
+Método abstrato que deve ser implementado nas classes derivadas para coletar a jogada do jogador.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+{\em apelido} & Apelido do jogador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::pair$<$int, int$>$ Par de coordenadas x e y onde a peça será jogada. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_lig4_abfded03707eff06bcb6a413975fd7bcf}{Lig4}} e \mbox{\hyperlink{class_reversi_a32fe04e48185f5c2894773e00c159179}{Reversi}}.
+
+\Hypertarget{class_tabuleiro_a3278eeef3c7732e9522d1de3bd80fd26}\index{Tabuleiro@{Tabuleiro}!fazerJogada@{fazerJogada}}
+\index{fazerJogada@{fazerJogada}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{fazerJogada()}{fazerJogada()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a3278eeef3c7732e9522d1de3bd80fd26} 
+virtual void Tabuleiro\+::fazer\+Jogada (\begin{DoxyParamCaption}\item[{char}]{time}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Realiza uma jogada no tabuleiro. 
+
+Método abstrato que deve ser implementado nas classes derivadas para definir como uma jogada é feita.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+{\em x} & Coordenada x onde a jogada será realizada. \\
+\hline
+{\em y} & Coordenada y onde a jogada será realizada. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \mbox{\hyperlink{class_lig4_a45547f8b9b791c34df280a38abb81800}{Lig4}} e \mbox{\hyperlink{class_reversi_ad2189f5129c406960c1144bc64398960}{Reversi}}.
+
+\Hypertarget{class_tabuleiro_a18a1877c279dd04699e4438e085aaad4}\index{Tabuleiro@{Tabuleiro}!getAltura@{getAltura}}
+\index{getAltura@{getAltura}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{getAltura()}{getAltura()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a18a1877c279dd04699e4438e085aaad4} 
+int Tabuleiro\+::get\+Altura (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_tabuleiro_af8d33506c3ea6e340966373338b450c2}\index{Tabuleiro@{Tabuleiro}!getCasa@{getCasa}}
+\index{getCasa@{getCasa}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{getCasa()}{getCasa()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_af8d33506c3ea6e340966373338b450c2} 
+\mbox{\hyperlink{class_casa}{Casa}} \& Tabuleiro\+::get\+Casa (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_tabuleiro_ae672223b0b94e5aae6a22fc608d523d9}\index{Tabuleiro@{Tabuleiro}!getLargura@{getLargura}}
+\index{getLargura@{getLargura}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{getLargura()}{getLargura()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_ae672223b0b94e5aae6a22fc608d523d9} 
+int Tabuleiro\+::get\+Largura (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_tabuleiro_ae2e256e1bc632250b7fb59340e8ef81d}\index{Tabuleiro@{Tabuleiro}!imprimirTabuleiro@{imprimirTabuleiro}}
+\index{imprimirTabuleiro@{imprimirTabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{imprimirTabuleiro()}{imprimirTabuleiro()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_ae2e256e1bc632250b7fb59340e8ef81d} 
+void Tabuleiro\+::imprimir\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Imprime o estado atual do tabuleiro. 
+
+Este método pode ser sobrescrito nas classes derivadas para definir como o tabuleiro é impresso. 
+
+Reimplementado por \mbox{\hyperlink{class_lig4_a495d8fb3850edaaf29d70eb511d134fb}{Lig4}}.
+
+\Hypertarget{class_tabuleiro_a6e2c23120592cbbf2248c483f334fbf8}\index{Tabuleiro@{Tabuleiro}!testarCondicaoVitoria@{testarCondicaoVitoria}}
+\index{testarCondicaoVitoria@{testarCondicaoVitoria}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{testarCondicaoVitoria()}{testarCondicaoVitoria()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a6e2c23120592cbbf2248c483f334fbf8} 
+virtual char Tabuleiro\+::testar\+Condicao\+Vitoria (\begin{DoxyParamCaption}\item[{char}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Testa as condições de vitória ou empate. 
+
+Método abstrato que deve ser implementado nas classes derivadas para verificar se há um vencedor ou se o jogo terminou em empate.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char Caractere representando o vencedor (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}), \textquotesingle{}E\textquotesingle{} para empate, ou \textquotesingle{} \textquotesingle{} para continuar o jogo. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_lig4_a91564f6fc1e717601b12f4c87f4a6c46}{Lig4}} e \mbox{\hyperlink{class_reversi_a2e26eedab6d98867acb7fdf89f698868}{Reversi}}.
+
+\Hypertarget{class_tabuleiro_a4d7394d0b59dc2c93291f66492f7bb4e}\index{Tabuleiro@{Tabuleiro}!testarJogada@{testarJogada}}
+\index{testarJogada@{testarJogada}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{testarJogada()}{testarJogada()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a4d7394d0b59dc2c93291f66492f7bb4e} 
+virtual std\+::string Tabuleiro\+::testar\+Jogada (\begin{DoxyParamCaption}\item[{char}]{time}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Testa se a jogada é válida. 
+
+Método abstrato que deve ser implementado nas classes derivadas para verificar a validade de uma jogada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em time} & Caractere representando o time (\textquotesingle{}B\textquotesingle{} ou \textquotesingle{}P\textquotesingle{}). \\
+\hline
+{\em x} & Coordenada x da jogada. \\
+\hline
+{\em y} & Coordenada y da jogada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string "{}\+OK"{} se a jogada é válida, ou uma mensagem de erro se não for. 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_lig4_ab06a93d83e71198702cf29f87e94077c}{Lig4}} e \mbox{\hyperlink{class_reversi_a2aac2fc0be4d6e17bb9164b09f2f2cdb}{Reversi}}.
+
+
+
+\doxysubsection{Atributos}
+\Hypertarget{class_tabuleiro_ae09a79a917996e4a3d213bcb9b775738}\index{Tabuleiro@{Tabuleiro}!casas@{casas}}
+\index{casas@{casas}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{casas}{casas}}
+{\footnotesize\ttfamily \label{class_tabuleiro_ae09a79a917996e4a3d213bcb9b775738} 
+\mbox{\hyperlink{class_casa}{Casa}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Tabuleiro\+::casas}
+
+
+
+Matriz de casas que compõem o tabuleiro. 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Reversi\+\_\+\+Lig4/project/include/\mbox{\hyperlink{_tabuleiro_8hpp}{Tabuleiro.\+hpp}}\item 
+Reversi\+\_\+\+Lig4/project/src/\+Tabuleiro/\mbox{\hyperlink{_tabuleiro_8cpp}{Tabuleiro.\+cpp}}\end{DoxyCompactItemize}

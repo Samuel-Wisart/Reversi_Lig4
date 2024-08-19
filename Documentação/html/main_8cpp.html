@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reversi/Lig4: Referência do Arquivo Reversi_Lig4/project/src/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Reversi/Lig4<span id="projectnumber">&#160;2.0</span>
+   </div>
+   <div id="projectbrief">Jogo pelo terminal de Reversi e Lig4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_9581213adc88692538d35c220abf2e36.html">Reversi_Lig4</a></li><li class="navelem"><a class="el" href="dir_d4d0e27a472355151978f7c7f79c5b8e.html">project</a></li><li class="navelem"><a class="el" href="dir_f3f4eec8eebdb2989a5753691e39ee21.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &quot;<a class="el" href="_reversi_8hpp_source.html">Reversi.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_lig4_8hpp_source.html">Lig4.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_jogador_8hpp_source.html">Jogador.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_partida_8hpp_source.html">Partida.hpp</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a1b43c33343b92256c60247f96d71deeb" id="r_a1b43c33343b92256c60247f96d71deeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b43c33343b92256c60247f96d71deeb">menuPrincipal</a> (<a class="el" href="class_jogadores.html">Jogadores</a> &amp;jogadores)</td></tr>
+<tr class="memdesc:a1b43c33343b92256c60247f96d71deeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe o menu principal e gerencia as interações com o usuário.  <br /></td></tr>
+<tr class="separator:a1b43c33343b92256c60247f96d71deeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6fc900d738e5ed7a18c39e2c95a5184" id="r_ab6fc900d738e5ed7a18c39e2c95a5184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6fc900d738e5ed7a18c39e2c95a5184">cadastrarJogador</a> (<a class="el" href="class_jogadores.html">Jogadores</a> &amp;jogadores)</td></tr>
+<tr class="memdesc:ab6fc900d738e5ed7a18c39e2c95a5184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cadastra um novo jogador no sistema.  <br /></td></tr>
+<tr class="separator:ab6fc900d738e5ed7a18c39e2c95a5184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed77088bc9abde3df27183c5e8733d41" id="r_aed77088bc9abde3df27183c5e8733d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed77088bc9abde3df27183c5e8733d41">removerJogador</a> (<a class="el" href="class_jogadores.html">Jogadores</a> &amp;jogadores)</td></tr>
+<tr class="memdesc:aed77088bc9abde3df27183c5e8733d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um jogador cadastrado no sistema.  <br /></td></tr>
+<tr class="separator:aed77088bc9abde3df27183c5e8733d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578fe436c78daf6b48b6b45cb5706084" id="r_a578fe436c78daf6b48b6b45cb5706084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a578fe436c78daf6b48b6b45cb5706084">listarJogadores</a> (<a class="el" href="class_jogadores.html">Jogadores</a> &amp;jogadores)</td></tr>
+<tr class="memdesc:a578fe436c78daf6b48b6b45cb5706084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os jogadores cadastrados.  <br /></td></tr>
+<tr class="separator:a578fe436c78daf6b48b6b45cb5706084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452d991ddf72c0ca8e98f3340c6b1ec8" id="r_a452d991ddf72c0ca8e98f3340c6b1ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a452d991ddf72c0ca8e98f3340c6b1ec8">iniciarPartida</a> (<a class="el" href="class_jogadores.html">Jogadores</a> &amp;jogadores)</td></tr>
+<tr class="memdesc:a452d991ddf72c0ca8e98f3340c6b1ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia uma nova partida entre dois jogadores.  <br /></td></tr>
+<tr class="separator:a452d991ddf72c0ca8e98f3340c6b1ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal que inicializa o sistema.  <br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções</h2>
+<a id="ab6fc900d738e5ed7a18c39e2c95a5184" name="ab6fc900d738e5ed7a18c39e2c95a5184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6fc900d738e5ed7a18c39e2c95a5184">&#9670;&#160;</a></span>cadastrarJogador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cadastrarJogador </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_jogadores.html">Jogadores</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>jogadores</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cadastra um novo jogador no sistema. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogadores</td><td>Referência ao objeto que gerencia os jogadores cadastrados. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a452d991ddf72c0ca8e98f3340c6b1ec8" name="a452d991ddf72c0ca8e98f3340c6b1ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452d991ddf72c0ca8e98f3340c6b1ec8">&#9670;&#160;</a></span>iniciarPartida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iniciarPartida </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_jogadores.html">Jogadores</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>jogadores</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicia uma nova partida entre dois jogadores. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogadores</td><td>Referência ao objeto que gerencia os jogadores cadastrados. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a578fe436c78daf6b48b6b45cb5706084" name="a578fe436c78daf6b48b6b45cb5706084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578fe436c78daf6b48b6b45cb5706084">&#9670;&#160;</a></span>listarJogadores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void listarJogadores </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_jogadores.html">Jogadores</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>jogadores</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista todos os jogadores cadastrados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogadores</td><td>Referência ao objeto que gerencia os jogadores cadastrados. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função principal que inicializa o sistema. </p>
+<dl class="section return"><dt>Retorna</dt><dd>int Código de status da aplicação. </dd></dl>
+
+</div>
+</div>
+<a id="a1b43c33343b92256c60247f96d71deeb" name="a1b43c33343b92256c60247f96d71deeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b43c33343b92256c60247f96d71deeb">&#9670;&#160;</a></span>menuPrincipal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menuPrincipal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_jogadores.html">Jogadores</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>jogadores</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exibe o menu principal e gerencia as interações com o usuário. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogadores</td><td>Referência ao objeto que gerencia os jogadores cadastrados. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed77088bc9abde3df27183c5e8733d41" name="aed77088bc9abde3df27183c5e8733d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed77088bc9abde3df27183c5e8733d41">&#9670;&#160;</a></span>removerJogador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removerJogador </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_jogadores.html">Jogadores</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>jogadores</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove um jogador cadastrado no sistema. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogadores</td><td>Referência ao objeto que gerencia os jogadores cadastrados. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

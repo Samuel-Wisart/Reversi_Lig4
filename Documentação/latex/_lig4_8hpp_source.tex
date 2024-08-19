@@ -1,0 +1,48 @@
+\doxysection{Lig4.\+hpp}
+\hypertarget{_lig4_8hpp_source}{}\label{_lig4_8hpp_source}\index{Reversi\_Lig4/project/include/Lig4.hpp@{Reversi\_Lig4/project/include/Lig4.hpp}}
+\mbox{\hyperlink{_lig4_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LIG4\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LIG4\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tabuleiro_8hpp}{Tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lig4}{Lig4}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_lig4_ac3b3dd2c68f057518384c8e888fe38cc}{Lig4}}(\textcolor{keywordtype}{int}\ altura,\ \textcolor{keywordtype}{int}\ largura);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_lig4_add1bf78f99caaf523113e7f4cf843744}{\string~Lig4}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lig4_a45547f8b9b791c34df280a38abb81800}{fazerJogada}}(\textcolor{keywordtype}{char}\ time,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00055\ \ \ \ \ std::string\ \mbox{\hyperlink{class_lig4_ab06a93d83e71198702cf29f87e94077c}{testarJogada}}(\textcolor{keywordtype}{char}\ time,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_lig4_aeb5b7a69c08d259ea56fb58de2d8c2a9}{checarSeDaPraJogar}}(\textcolor{keywordtype}{char}\ time);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_lig4_a91564f6fc1e717601b12f4c87f4a6c46}{testarCondicaoVitoria}}(\textcolor{keywordtype}{char}\ time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00087\ \ \ \ \ std::pair<int,\ int>\ \mbox{\hyperlink{class_lig4_abfded03707eff06bcb6a413975fd7bcf}{coletarJogada}}(\textcolor{keywordtype}{char}\ time,\ std::string\ apelido)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lig4_a495d8fb3850edaaf29d70eb511d134fb}{imprimirTabuleiro}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{bool}\ pecaVenceu(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{bool}\ pecaVenceu(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{void}(direcionador)(\textcolor{keywordtype}{int}\ \&,\ \textcolor{keywordtype}{int}\ \&));}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ soltarPeca(\textcolor{keywordtype}{char}\ time,\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{char}\ testarVitoriaPorLigacao();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ retirarMarcacoesDeQuedaDePeca();}
+\DoxyCodeLine{00145\ \};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_lig4_8hpp_a45f1a45d626b5ca0051350bdd9f5e127}{mudarCor}}(\mbox{\hyperlink{class_casa}{Casa}}\ *casa);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LIG4\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,92 @@
+\doxysection{Jogador.\+hpp}
+\hypertarget{_jogador_8hpp_source}{}\label{_jogador_8hpp_source}\index{Reversi\_Lig4/project/include/Jogador.hpp@{Reversi\_Lig4/project/include/Jogador.hpp}}
+\mbox{\hyperlink{_jogador_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JOGADOR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JOGADOR\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <filesystem>}\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_jogador}{Jogador}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ nome;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ apelido;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ vitoriasReversi\ =\ 0;\ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ derrotasReversi\ =\ 0;\ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ empatesReversi\ =\ 0;\ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ vitoriasLig4\ =\ 0;\ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ derrotasLig4\ =\ 0;\ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ empatesLig4\ =\ 0;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_jogador_ad3a89a4deb03e087c60761909c631adc}{Jogador}}(\textcolor{keyword}{const}\ std::string\ \&nome,\ \textcolor{keyword}{const}\ std::string\ \&apelido);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_jogador_ad3a89a4deb03e087c60761909c631adc}{Jogador}}(\textcolor{keyword}{const}\ std::string\ \&nome,\ \textcolor{keyword}{const}\ std::string\ \&apelido,\ \textcolor{keywordtype}{int}\ vitoriasReversi,\ \textcolor{keywordtype}{int}\ derrotasReversi,\ \textcolor{keywordtype}{int}\ empatesReversi,\ \textcolor{keywordtype}{int}\ vitoriasLig4,\ \textcolor{keywordtype}{int}\ derrotasLig4,\ \textcolor{keywordtype}{int}\ empatesLig4);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Getters\ (sem\ comentários)}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ std::string\ \mbox{\hyperlink{class_jogador_a56f68b57e7fb229f932ef60d2116833c}{getNome}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ std::string\ \mbox{\hyperlink{class_jogador_aab1dd73438da8f07e1b9b8b9df0a5eb4}{getApelido}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a68f9478b7320d8fc9755a179494b9540}{getVitoriasReversi}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a9fb4c016cdd1f431592498e424abb949}{getDerrotasReversi}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a0c57d1f601fbe345bd4dafbc43b955bc}{getEmpatesReversi}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_ab73305554133ef6b1f4c6e74052989ea}{getVitoriasLig4}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_aab3317ad34e3a92ccb6d0b4cecccc04e}{getDerrotasLig4}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a83a59dc9348f74992da539e98a309b67}{getEmpatesLig4}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ Incrementadores}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_ac89fc8105c34fdc83b8877b69f1ace76}{incrementarVitoriasReversi}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_aac76395ba3543cd861471b621bb1a19e}{incrementarDerrotasReversi}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_ab9e68cee9523667f2f0a4ed464648dd1}{incrementarEmpatesReversi}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_a12ddae98c0d50cfb2bc0bd30de5530a1}{incrementarVitoriasLig4}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_ad3ce143a3afa857931656258d980f17c}{incrementarDerrotasLig4}}();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_a0c7bb5f534eda913e9d4202aece695a0}{incrementarEmpatesLig4}}();}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_jogadores}{Jogadores}}}
+\DoxyCodeLine{00101\ \{}
+\DoxyCodeLine{00102\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00103\ \ \ \ \ std::vector<Jogador>\ jogadores;\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{class_jogadores_a7ce59dd91823c2d9b4c45232ce14e007}{Jogadores}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogadores_a60c4048da2e7e741bc7effe10b2326df}{cadastrarJogador}}(\textcolor{keyword}{const}\ std::string\ \&nome,\ \textcolor{keyword}{const}\ std::string\ \&apelido);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogadores_a079c120ced9b9fc5b31f2ed5b1b09ad9}{removerJogador}}(\textcolor{keyword}{const}\ std::string\ \&apelido);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogadores_a0d59ecaf5931ce0e7c7e369162f1507f}{listarJogadores}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogadores_a5478271a3839c0701c14e09ec399ff00}{salvarJogadores}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogadores_a2fbb3075a650df7e7a152c3360cbaf34}{carregarJogadores}}();}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogadores_a5af0adce63888fae7126cb19461bf599}{criarArquivoJogadores}}();}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogadores_a6ef5cf46c8ac6f2d05ce154a65fa3def}{imprimirJogadores}}();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{class_jogador}{Jogador}}*\ \mbox{\hyperlink{class_jogadores_ad016df2db850dc0ef40cfc7ec619d902}{buscarJogadorPorApelido}}(\textcolor{keyword}{const}\ std::string\ \&apelido);}
+\DoxyCodeLine{00160\ \};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00171\ std::ostream\&\ \mbox{\hyperlink{_jogador_8hpp_acd1ff7c81d447def36691dd88cef41b4}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_jogador}{Jogador}}\&\ jogador);}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00176\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_arquivo_nao_encontrado}{ArquivoNaoEncontrado}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00177\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_arquivo_nao_encontrado_aafba3cb25741a5a138206c1a4c765084}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}O\ arquivo\ nao\ foi\ encontrado\ ou\ nao\ existe"{}};}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ JOGADOR\_HPP}}
+
+\end{DoxyCode}
