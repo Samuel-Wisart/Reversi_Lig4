@@ -4,7 +4,6 @@
 #include <fstream>
 #include <cstdio> 
 
-// Helper function para limpar o ambiente de testes
 void limparArquivoJogadores() {
     std::remove("../data/jogadores.csv");
 }

@@ -90,26 +90,26 @@ TEST_CASE("Testes para a funcao coletarJogada em Lig4") {
     Lig4 lig4(7, 6);
 
     std::istringstream input("3");
-    std::streambuf *cinbuf = std::cin.rdbuf(); // salva o buffer original de std::cin
-    std::cin.rdbuf(input.rdbuf()); // redireciona std::cin para o input simulado
+    std::streambuf *cinbuf = std::cin.rdbuf(); 
+    std::cin.rdbuf(input.rdbuf()); 
 
     auto jogada = lig4.coletarJogada('B', "Joao");
     CHECK(jogada.first == 3);
     CHECK(jogada.second == 0);
 
-    std::cin.rdbuf(cinbuf); // restaura o buffer original de std::cin
+    std::cin.rdbuf(cinbuf);
 }
 
 TEST_CASE("Testes para a funcao coletarJogada em Reversi") {
     Reversi reversi(8, 8);
 
     std::istringstream input("4 5\n");
-    std::streambuf *cinbuf = std::cin.rdbuf(); // salva o buffer original de std::cin
-    std::cin.rdbuf(input.rdbuf()); // redireciona std::cin para o input simulado
+    std::streambuf *cinbuf = std::cin.rdbuf(); 
+    std::cin.rdbuf(input.rdbuf()); 
 
     auto jogada = reversi.coletarJogada('B', "Maria");
     CHECK(jogada.first == 4);
     CHECK(jogada.second == 5);
 
-    std::cin.rdbuf(cinbuf); // restaura o buffer original de std::cin
+    std::cin.rdbuf(cinbuf); 
 }

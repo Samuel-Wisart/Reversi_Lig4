@@ -6,11 +6,46 @@
 #include "Jogador.hpp"
 #include "Partida.hpp"
 
+/**
+ * @brief Exibe o menu principal e gerencia as interações com o usuário.
+ * 
+ * @param jogadores Referência ao objeto que gerencia os jogadores cadastrados.
+ */
 void menuPrincipal(Jogadores &jogadores);
+
+/**
+ * @brief Cadastra um novo jogador no sistema.
+ * 
+ * @param jogadores Referência ao objeto que gerencia os jogadores cadastrados.
+ */
 void cadastrarJogador(Jogadores &jogadores);
+
+/**
+ * @brief Remove um jogador cadastrado no sistema.
+ * 
+ * @param jogadores Referência ao objeto que gerencia os jogadores cadastrados.
+ */
 void removerJogador(Jogadores &jogadores);
+
+/**
+ * @brief Lista todos os jogadores cadastrados.
+ * 
+ * @param jogadores Referência ao objeto que gerencia os jogadores cadastrados.
+ */
 void listarJogadores(Jogadores &jogadores);
+
+/**
+ * @brief Inicia uma nova partida entre dois jogadores.
+ * 
+ * @param jogadores Referência ao objeto que gerencia os jogadores cadastrados.
+ */
 void iniciarPartida(Jogadores &jogadores);
+
+/**
+ * @brief Função principal que inicializa o sistema.
+ * 
+ * @return int Código de status da aplicação.
+ */
 
 int main() {
     Jogadores jogadores;
