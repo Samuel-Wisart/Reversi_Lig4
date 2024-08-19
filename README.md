@@ -65,4 +65,6 @@ make
 
 Para compilar e executar os testes use o comando:
 
-```make test```
+```bash
+make test
+```
