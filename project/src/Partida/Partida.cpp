@@ -45,7 +45,7 @@ void Partida::executarPartida()
             }
         }
     } catch (const std::exception &e) {
-        std::cerr << "Erro durante a execução da partida: " << e.what() << std::endl;
+        std::cerr << "Erro durante a execucao da partida: " << e.what() << std::endl;
     }
 }
 

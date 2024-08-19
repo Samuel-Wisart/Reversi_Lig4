@@ -37,6 +37,7 @@ public:
 
     int getAltura();
     int getLargura();
+    Casa& getCasa(int x, int y);
 
     virtual void fazerJogada(char time, int x, int y) = 0;
     virtual std::string testarJogada(char time, int x, int y) = 0;

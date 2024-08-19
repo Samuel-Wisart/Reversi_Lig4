@@ -7,25 +7,18 @@ Lig4::Lig4(int altura, int largura) : Tabuleiro(altura, largura)
 
 void Lig4::fazerJogada(char time, int x, int y)
 {
-    try
-    {
-        testarJogada(time, x, y);
+    std::string teste = testarJogada(time, x, y);
+    if (teste != "OK") throw std::invalid_argument(teste);
 
-        retirarMarcacoesDeQuedaDePeca();
+    retirarMarcacoesDeQuedaDePeca();
 
-        soltarPeca(time, x);
-
-    }
-    catch (std::invalid_argument &e)
-    {
-        std::cout << "Jogada Invalida: " << e.what() << std::endl
-                  << std::endl;
-    }
+    soltarPeca(time, x);
 }
 
 std::pair<int, int> Lig4::coletarJogada(char time, std::string apelido)
 {
-    if (time != 'B' && time != 'P') throw std::invalid_argument("Time invalido");
+    if (time != 'B' && time != 'P')
+        throw std::invalid_argument("Time invalido");
 
     std::pair<int, int> jogada;
 
@@ -108,7 +101,7 @@ std::string Lig4::testarJogada(char time, int x, int y)
 {
     if (y != 0)
     {
-        throw std::invalid_argument("Posicao invalida, y deve ser 0");
+        return "Posicao invalida, y deve ser 0";
     }
 
     if (x < 0 || x >= getLargura())

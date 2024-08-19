@@ -4,10 +4,10 @@
 Reversi::Reversi(int altura, int largura) : Tabuleiro(altura, largura)
 {
     // Inicializa o tabuleiro com as peças iniciais
-    casas[(altura / 2 - 1)][(largura / 2 - 1)]->setCor('B');
-    casas[(altura / 2)][(largura / 2) - 1]->setCor('P');
-    casas[(altura / 2) - 1][(largura / 2)]->setCor('P');
-    casas[(altura / 2)][(largura / 2)]->setCor('B');
+    casas[(altura / 2 - 1)][(largura / 2 - 1)]->setCor('P');
+    casas[(altura / 2)][(largura / 2) - 1]->setCor('B');
+    casas[(altura / 2) - 1][(largura / 2)]->setCor('B');
+    casas[(altura / 2)][(largura / 2)]->setCor('P');
 }
 
 void Reversi::fazerJogada(char time, int x, int y)
@@ -31,7 +31,7 @@ void Reversi::fazerJogada(char time, int x, int y)
 std::string Reversi::testarJogada(char time, int x, int y)
 {   
     if (x < 0 || x >= getLargura() || y < 0 || y >= getAltura())
-    {
+    {   
         return "Posicao invalida";
     }
     if (casas[x][y]->getCor() != ' ')
@@ -80,11 +80,12 @@ char Reversi::testarCondicaoVitoria(char time)
 
 std::pair<int, int> Reversi::coletarJogada(char time, std::string apelido)
 {
-    if (time != 'B' || time != 'P') throw std::invalid_argument("Time invalido");
+    if (time != 'B' && time != 'P') throw std::invalid_argument("Time invalido");
 
-    std::pair<int, int> jogada;
+    std::pair<int, int> jogada(-1, -1);
+    int tentativas = 0;
 
-    while (true)
+    while (tentativas < 5)
     {
         int x, y;
 
@@ -101,10 +102,15 @@ std::pair<int, int> Reversi::coletarJogada(char time, std::string apelido)
         }
         else
         {
-            std::cout << "Jogada Invalida: " << resultadoTeste << std::endl
-                      << std::endl;
+            std::cout << "Jogada Invalida: " << resultadoTeste << std::endl << std::endl;
+            tentativas++;
         }
     }
+    if (tentativas >= 5)
+    {
+        throw std::invalid_argument("Jogada invalida: Tentativas excedidas");
+    }
+    return jogada;
 }
 
 bool Reversi::checarSeDaPraJogar(char time)

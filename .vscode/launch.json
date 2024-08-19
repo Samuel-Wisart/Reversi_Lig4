@@ -24,6 +24,29 @@
             "logging": {
                 "engineLogging": true
             }
+        },
+        {
+            "name": "Debug Tests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/tests_exe.exe",  // Caminho para o executável dos testes
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/project",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "F:/msys64/mingw64/bin/gdb.exe",  // Caminho para o gdb do MSYS2
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build",  // Task que compila o projeto antes de depurar
+            "postDebugTask": "clean-objects",  // Task opcional para limpeza após a depuração
+            "internalConsoleOptions": "openOnSessionStart"
         }
     ]
 }

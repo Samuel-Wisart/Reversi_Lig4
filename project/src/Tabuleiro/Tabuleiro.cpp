@@ -38,6 +38,14 @@ int Tabuleiro::getLargura()
     return largura;
 }
 
+Casa& Tabuleiro::getCasa(int x, int y) {
+    if (x >= 0 && x < largura && y >= 0 && y < altura) {
+        return *casas[x][y];
+    } else {
+        throw std::out_of_range("Posição fora dos limites do tabuleiro");
+    }
+}
+
 void Tabuleiro::imprimirTabuleiro()
 {   
     for (int i = 0; i < altura; i++)
